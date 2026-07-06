@@ -1661,6 +1661,46 @@ function(t){t.__bidiEngine__=t.prototype.__bidiEngine__=function(t){var r,n,i,a,
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 
+  // URL curent al formularului "Test Răni Financiare — Organic" din Newsman
+  // (Liste > danielabostan.ro > Setări > Formulare abonare > Configurare > URL JSONP)
+  const NEWSMAN_JSONP_URL = 'https://nl.danielabostan.ro/subscribejsonp/16541/6a39736d1fbbbf5a06a2fa9c/d261d86f731de370846856cc88cd6fbd';
+
+  function subscribeToNewsman(email, name) {
+    return new Promise((resolve, reject) => {
+      const callbackName = 'nzmCallback_' + Date.now();
+      const script = document.createElement('script');
+
+      const cleanup = () => {
+        delete window[callbackName];
+        script.remove();
+      };
+
+      window[callbackName] = function(data) {
+        cleanup();
+        if (data && data.err === false) {
+          resolve(data);
+        } else {
+          reject(data);
+        }
+      };
+
+      const params = new URLSearchParams({
+        email: email,
+        fname: name,
+        agree_tc: '1',
+        source: 'test-rani-financiare',
+        callback: callbackName
+      });
+
+      script.src = `${NEWSMAN_JSONP_URL}?${params.toString()}`;
+      script.onerror = () => {
+        cleanup();
+        reject(new Error('Newsman JSONP request failed to load'));
+      };
+      document.body.appendChild(script);
+    });
+  }
+
   function submitEmail() {
     const nameInput = document.getElementById('input-name');
     const emailInput = document.getElementById('input-email');
@@ -1715,38 +1755,18 @@ function(t){t.__bidiEngine__=t.prototype.__bidiEngine__=function(t){var r,n,i,a,
       submitStatus.textContent = '';
       submitStatus.style.color = '';
 
-      // Abonare direct la Newsman via iframe ascuns (fără server, fără CORS)
-      (function(e, n) {
-      var iframe = document.createElement('iframe');
-      iframe.name = 'nm_frame_' + Date.now();
-      iframe.style.cssText = 'display:none;width:0;height:0;border:0;';
-      document.body.appendChild(iframe);
-
-      var form = document.createElement('form');
-      form.method = 'POST';
-      form.action = 'https://www.newsman.app/public/subscribe/17780/16541/';
-      form.target = iframe.name;
-      form.style.display = 'none';
-
-      [['email', e], ['fname', n], ['gdpr', '1'], ['source', 'test-rani-financiare']].forEach(function(pair) {
-        var input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = pair[0];
-        input.value = pair[1];
-        form.appendChild(input);
+      subscribeToNewsman(email, name).then(function() {
+        screenEmail.classList.add('hidden');
+        showResults();
+      }).catch(function(data) {
+        console.error('Abonarea Newsman a eșuat:', data);
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Vezi rezultatele →';
+        const msg = (data && data.response && data.response.errors && data.response.errors[0])
+          || 'Nu am putut înregistra abonarea. Te rog încearcă din nou.';
+        submitStatus.textContent = msg;
+        submitStatus.style.color = '#B3492E';
       });
-
-      document.body.appendChild(form);
-      form.submit();
-
-      setTimeout(function() {
-        document.body.removeChild(form);
-        document.body.removeChild(iframe);
-      }, 5000);
-      }(email, name));
-
-      screenEmail.classList.add('hidden');
-      showResults();
     } catch (err) {
       console.error('submitEmail a eșuat:', err);
       submitStatus.textContent = 'A apărut o eroare neașteptată. Te rog încearcă din nou sau scrie-ne.';
