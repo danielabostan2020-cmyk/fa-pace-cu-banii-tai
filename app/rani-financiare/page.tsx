@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
-    url: 'https://danielabostan.ro/rani-financiare',
+    url: 'https://danielabostan.ro/rani-financiare.html',
     images: ['https://danielabostan.ro/og-test-rani-financiare.png'],
   },
   twitter: {
