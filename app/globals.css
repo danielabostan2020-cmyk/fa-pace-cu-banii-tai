@@ -1134,9 +1134,10 @@ footer a:hover { text-decoration: underline; }
 ══════════════════════════════════════ */
 #cookie-banner {
   position: fixed;
-  bottom: 64px;
+  bottom: 16px;
   left: 12px;
   right: 12px;
+  max-width: 420px;
   background: rgba(14,9,36,0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -1150,7 +1151,7 @@ footer a:hover { text-decoration: underline; }
   flex-wrap: wrap;
   box-shadow: 0 8px 40px rgba(0,0,0,0.4);
 }
-@media (min-width: 769px) { #cookie-banner { bottom: 16px; left: 24px; right: auto; max-width: 520px; } }
+@media (min-width: 480px) { #cookie-banner { right: auto; } }
 
 #cookie-banner p {
   font-family: var(--font-lora), serif;
@@ -1186,5 +1187,92 @@ footer a:hover { text-decoration: underline; }
   transition: border-color var(--transition), color var(--transition);
 }
 .cookie-decline:hover { border-color: rgba(255,255,255,0.28); color: rgba(255,255,255,0.6); }
+
+/* ══════════════════════════════════════
+   LEAD MAGNET LANDING — TEST RĂNI FINANCIARE
+══════════════════════════════════════ */
+#test-hero {
+  background: var(--violet-deep);
+  padding: 110px 0 90px;
+  overflow: hidden;
+}
+#test-hero .hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 10% 85%, rgba(196,120,90,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 10%, rgba(45,31,94,0.6) 0%, transparent 55%),
+    radial-gradient(ellipse at 50% 50%, rgba(201,168,76,0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+#test-hero .hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
+}
+#test-hero .container { position: relative; z-index: 1; }
+#test-hero h1 { color: var(--cream); margin-bottom: 18px; }
+
+.hero-byline {
+  font-family: var(--font-lora), serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--gold);
+  letter-spacing: 0.03em;
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+
+.benefit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 680px;
+}
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--border-light);
+}
+.benefit-item:last-child { border-bottom: none; padding-bottom: 0; }
+.benefit-num {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-cormorant), serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+.benefit-item p {
+  margin: 0;
+  padding-top: 6px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.testi-grid-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) { .testi-grid-3 { grid-template-columns: 1fr; } }
+
+.founder-story-body--flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 36px;
+}
+.founder-story-body--flex .founder-photo { float: none; margin: 0; }
+.founder-story-body--flex .founder-text { flex: 1; min-width: 0; }
+@media (max-width: 720px) {
+  .founder-story-body--flex { flex-direction: column; align-items: center; }
+  .founder-story-body--flex .founder-photo { max-width: 200px; }
+}
 
 .hidden { display: none !important; }

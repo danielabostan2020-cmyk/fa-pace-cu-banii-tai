@@ -1,15 +1,16 @@
-export default function Footer() {
+const defaultDisclaimer =
+  'Fă pace cu banii tăi este un program educațional și transformațional. Programul nu ' +
+  'oferă consultanță financiară, fiscală, juridică, medicală sau psihoterapie ' +
+  'individuală. Rezultatele individuale variază în funcție de contextul personal, ' +
+  'nivelul de implicare și aplicarea practică. Participarea la program nu garantează ' +
+  'creșteri de venit sau rezultate financiare specifice.'
+
+export default function Footer({ disclaimer = defaultDisclaimer }: { disclaimer?: string }) {
   return (
     <>
       <section id="nota-legala">
         <div className="container">
-          <p>
-            Fă pace cu banii tăi este un program educațional și transformațional. Programul nu
-            oferă consultanță financiară, fiscală, juridică, medicală sau psihoterapie
-            individuală. Rezultatele individuale variază în funcție de contextul personal,
-            nivelul de implicare și aplicarea practică. Participarea la program nu garantează
-            creșteri de venit sau rezultate financiare specifice.
-          </p>
+          <p>{disclaimer}</p>
         </div>
       </section>
 
