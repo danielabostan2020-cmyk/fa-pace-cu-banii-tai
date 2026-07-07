@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     title,
     description,
     url: 'https://danielabostan.ro/rani-financiare.html',
+    type: 'website',
     images: ['https://danielabostan.ro/og-test-rani-financiare.png'],
   },
   twitter: {
