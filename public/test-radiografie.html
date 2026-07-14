@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Radiografia Blocajului Tău Financiar - Descoperă ce tipar emoțional îți blochează veniturile">
+    <meta name="theme-color" content="#2D1F5E">
+    <title>Radiografia Blocajului Tău Financiar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #F9F5F0;
+            color: #2D1F5E;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .app-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content-wrapper {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, rgba(45, 31, 94, 0.05) 0%, rgba(201, 168, 76, 0.05) 100%);
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: #C9A84C;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: clamp(28px, 5vw, 48px);
+            color: #2D1F5E;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: clamp(14px, 2vw, 18px);
+            color: #6B5B7F;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .screen {
+            display: none;
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in forwards;
+        }
+
+        .screen.active {
+            display: block;
+            opacity: 1;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Screen 1: Start */
+        .screen-start {
+            text-align: center;
+        }
+
+        .features {
+            background: #EAE6F3;
+            padding: clamp(20px, 5vw, 40px);
+            border-radius: 12px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .features h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 20px;
+            color: #2D1F5E;
+            margin-bottom: 20px;
+        }
+
+        .features ul {
+            list-style: none;
+        }
+
+        .features li {
+            padding: 12px 0;
+            padding-left: 35px;
+            position: relative;
+            color: #2D1F5E;
+            font-size: 15px;
+        }
+
+        .features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #C9A84C;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 40px 0;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px 15px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #C9A84C;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: #6B5B7F;
+            font-weight: 500;
+        }
+
+        .button {
+            background: #C9A84C;
+            color: white;
+            border: none;
+            padding: 14px 40px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 12px rgba(201, 168, 76, 0.3);
+        }
+
+        .button:hover {
+            background: #B8942F;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(201, 168, 76, 0.4);
+        }
+
+        .button:active {
+            transform: translateY(0);
+        }
+
+        .button-secondary {
+            background: white;
+            color: #2D1F5E;
+            border: 2px solid #C9A84C;
+            box-shadow: none;
+        }
+
+        .button-secondary:hover {
+            background: #F9F5F0;
+            box-shadow: 0 4px 12px rgba(45, 31, 94, 0.15);
+        }
+
+        .cta-subtext {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #6B5B7F;
+        }
+
+        /* Screen 2: Questions */
+        .question-container {
+            background: white;
+            padding: clamp(25px, 5vw, 45px);
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #EAE6F3;
+            border-radius: 3px;
+            margin-bottom: 35px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #C9A84C 0%, #B8942F 100%);
+            transition: width 0.4s ease;
+            border-radius: 3px;
+        }
+
+        .question-number {
+            font-size: 13px;
+            color: #6B5B7F;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .question-text {
+            font-family: 'Libre Baskerville', serif;
+            font-size: clamp(20px, 4vw, 28px);
+            color: #2D1F5E;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .question-subtext {
+            font-size: 14px;
+            color: #6B5B7F;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .option {
+            padding: 16px 20px;
+            border: 2px solid #EAE6F3;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+            font-size: 15px;
+            color: #2D1F5E;
+            font-weight: 500;
+            text-align: left;
+        }
+
+        .option:hover {
+            border-color: #C9A84C;
+            background: #F9F5F0;
+            transform: translateX(4px);
+        }
+
+        .option.selected {
+            background: #EAE6F3;
+            border-color: #C9A84C;
+            color: #2D1F5E;
+            font-weight: 600;
+        }
+
+        .option-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .checkbox-input {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: #C9A84C;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #EAE6F3;
+            border-radius: 8px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 15px;
+            color: #2D1F5E;
+            resize: vertical;
+            min-height: 100px;
+            transition: border-color 0.3s ease;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #C9A84C;
+            background: #F9F5F0;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 35px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .button-group .button {
+            flex: 1;
+            min-width: 120px;
+        }
+
+        #continueBtn {
+            display: none;
+        }
+
+        /* Screen 3: Loading */
+        .loading-container {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid #EAE6F3;
+            border-top-color: #C9A84C;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 30px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loading-text {
+            font-size: 18px;
+            color: #2D1F5E;
+            font-weight: 600;
+            margin: 20px 0;
+        }
+
+        .loading-subtext {
+            font-size: 14px;
+            color: #6B5B7F;
+        }
+
+        /* Screen 4: Results */
+        .results-container {
+            background: white;
+            padding: clamp(25px, 5vw, 45px);
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .results-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: clamp(24px, 4vw, 36px);
+            text-align: center;
+            color: #2D1F5E;
+            margin-bottom: 35px;
+            line-height: 1.3;
+        }
+
+        .profile-card {
+            background: linear-gradient(135deg, #EAE6F3 0%, #F9F5F0 100%);
+            padding: clamp(20px, 5vw, 35px);
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border-left: 5px solid #C9A84C;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .profile-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: clamp(20px, 3vw, 28px);
+            color: #2D1F5E;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .profile-badge {
+            display: inline-block;
+            background: #C9A84C;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .profile-text {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #2D1F5E;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #2D1F5E 0%, #6B5B7F 100%);
+            color: white;
+            padding: clamp(30px, 5vw, 45px);
+            border-radius: 12px;
+            margin: 35px 0;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(45, 31, 94, 0.25);
+        }
+
+        .cta-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: clamp(22px, 3vw, 32px);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .cta-text {
+            font-size: 15px;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            background: #C9A84C;
+            color: #2D1F5E;
+            padding: 14px 40px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 12px rgba(201, 168, 76, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #B8942F;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(201, 168, 76, 0.4);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #EAE6F3;
+            margin-top: 40px;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-main {
+            font-weight: 600;
+            color: #2D1F5E;
+            margin-bottom: 5px;
+        }
+
+        .footer-sub {
+            font-size: 13px;
+            color: #6B5B7F;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                padding: 15px;
+            }
+
+            header {
+                padding: 30px 15px;
+            }
+
+            .question-container {
+                padding: 20px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .button-group .button {
+                width: 100%;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .stat-card {
+                padding: 20px 10px;
+            }
+
+            .stat-number {
+                font-size: 24px;
+            }
+
+            .stat-label {
+                font-size: 12px;
+            }
+
+            .option {
+                padding: 14px 16px;
+                font-size: 14px;
+            }
+
+            .profile-card {
+                padding: 20px;
+            }
+
+            .cta-section {
+                padding: 25px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .subtitle {
+                font-size: 14px;
+            }
+
+            .question-text {
+                font-size: 18px;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .stat-card {
+                padding: 15px 8px;
+            }
+
+            .stat-number {
+                font-size: 20px;
+            }
+
+            .stat-label {
+                font-size: 11px;
+            }
+
+            .button {
+                padding: 12px 24px;
+                font-size: 14px;
+            }
+
+            .option {
+                padding: 12px 14px;
+                font-size: 13px;
+            }
+
+            textarea {
+                min-height: 80px;
+                font-size: 14px;
+            }
+
+            .profile-title {
+                font-size: 18px;
+            }
+
+            .cta-title {
+                font-size: 20px;
+            }
+
+            .cta-text {
+                font-size: 14px;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .screen {
+                display: block !important;
+                page-break-after: always;
+            }
+
+            .button, .button-group {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">Bani & Bucurie</div>
+            <h1>Radiografia Blocajului Tău Financiar</h1>
+            <p class="subtitle">Descoperă în 3 minute ce tipar emoțional îți blochează veniturile — și de ce corpul tău respinge creșterea financiară chiar când mintea ta o vrea.</p>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="container">
+                <!-- Screen 1: Start -->
+                <div class="screen screen-start active">
+                    <div class="features">
+                        <h3>Ce vei descoperi</h3>
+                        <ul>
+                            <li>Tiparul tău dominant din cele 4 profiluri somatice</li>
+                            <li>Nivelul de activare al blocajului tău financiar</li>
+                            <li>Recomandări practice specifice pentru profilul tău</li>
+                        </ul>
+                    </div>
+
+                    <div class="stats">
+                        <div class="stat-card">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">Întrebări</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Minute</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">4</div>
+                            <div class="stat-label">Profiluri</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Privat</div>
+                        </div>
+                    </div>
+
+                    <button class="button" onclick="app.startTest()">Începe Testul Gratuit</button>
+                    <p class="cta-subtext">Gratuit · Fără card · Rezultate imediate</p>
+                </div>
+
+                <!-- Screen 2: Questions -->
+                <div class="screen screen-questions">
+                    <div class="question-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <div class="question-number" id="questionNumber"></div>
+                        <div class="question-text" id="questionText"></div>
+                        <div class="question-subtext">Este adevărat pentru tine?</div>
+                        <div id="optionsContainer"></div>
+                        <div class="button-group">
+                            <button class="button button-secondary" onclick="app.previousQuestion()">← Înapoi</button>
+                            <button class="button" id="continueBtn" onclick="app.nextQuestion()">Continuă →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screen 3: Loading -->
+                <div class="screen screen-loading">
+                    <div class="loading-container">
+                        <div class="spinner"></div>
+                        <div class="loading-text">Analizez răspunsurile tale...</div>
+                        <div class="loading-subtext">Pregătesc raportul personalizat</div>
+                    </div>
+                </div>
+
+                <!-- Screen 4: Results -->
+                <div class="screen screen-results">
+                    <div class="results-container">
+                        <h2 class="results-title">Raportul Tău Financiar Personalizat</h2>
+                        <div id="resultsContent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-main">Daniela Bostan</div>
+            <div class="footer-sub">Practician EFT Matrix Reimprinting | Vindecare Emotionala Financiară</div>
+        </footer>
+    </div>
+
+    <script>
+        const app = {
+            questions: [
+                { id: 1, text: "Amâni frecvent să verifici extrasul de cont, să deschizi e-mailurile legate de taxe sau să faci analiza cifrelor din business și din viață, sperând în secret că totul va fi bine de la sine?", type: "yesno", profile: "FREEZE" },
+                { id: 2, text: "Îți este greu să ceri prețul corect sau să trimiți o factură de teamă că clienții te vor respinge, te vor considera lacomă sau își vor schimba părerea despre tine?", type: "yesno", profile: "FAWN" },
+                { id: 3, text: "Crezi subconștient că majoritatea problemelor tale de viață s-ar rezolva dacă ai câștiga o anumită sumă de bani, motiv pentru care muncești până la epuizare fără să te poți opri?", type: "yesno", profile: "FLIGHT" },
+                { id: 4, text: "Atunci când încasezi o sumă mai mare, simți o agitație în corp care te împinge să cheltuiești rapid sau să pui banii la treabă imediat, fără să îi poți păstra cu calm în cont?", type: "yesno", profile: "FLIGHT" },
+                { id: 5, text: "Simți uneori presiunea să cumperi haine, cursuri premium, gadgeturi sau experiențe scumpe, în principal pentru a menține o imagine de succes în fața clienților sau a colegilor din nișa ta?", type: "yesno", profile: "FAWN" },
+                { id: 6, text: "Îți este greu sau rușine să recunoști în fața celorlalți — sau chiar a partenerului de viață — când treci printr-o lună slabă financiar, preferând să mimezi că totul merge bine?", type: "yesno", profile: "FIGHT" },
+                { id: 7, text: "Atunci când contul tău este plin, în loc să te relaxezi, simți o anxietate subtilă de fundal — ca și cum urmează să se întâmple ceva rău și trebuie să fii pregătită?", type: "yesno", profile: "FREEZE" },
+                { id: 8, text: "Îți este foarte greu să cheltuiești bani pentru propria relaxare sau plăcere fără să fii inundată instant de vinovăție sau autocritică?", type: "yesno", profile: "FIGHT" },
+                { id: 9, text: "Simți o loialitate față de trecutul familiei tale, repetând convingerea generațională că banii se fac doar prin sacrificiu, efort și muncă multă?", type: "yesno", profile: null },
+                { id: 10, text: "Ai observat că te plafonezi la același nivel de venituri de mai bine de 6-12 luni, indiferent de câte cursuri de marketing sau strategii noi aplici?", type: "yesno", profile: null },
+                { id: 11, text: "Care îți descrie cel mai bine situația ta actuală?", type: "radio", options: [{ value: "a", label: "Freelancer / soloprenor la început" }, { value: "b", label: "Proprietar de business cu echipă" }, { value: "c", label: "Manager / Lider în corporație" }, { value: "d", label: "Angajat care vrea o schimbare" }] },
+                { id: 12, text: "Care este cel mai urgent rezultat pe care îl cauți acum?", type: "radio", options: [{ value: "a", label: "Să ies din starea de anxietate financiară și să am stabilitate" }, { value: "b", label: "Să depășesc nivelul actual și să pot păstra banii fără să mă autosabotez" }, { value: "c", label: "Să cresc businessul și să generez bani cu ușurință, fără să mă epuizez" }] },
+                { id: 13, text: "Ce ai încercat în trecut și NU a funcționat pe termen lung?", type: "checkbox", options: [{ value: "a", label: "Cursuri de marketing, vânzări și strategii clasice de business" }, { value: "b", label: "Tehnici de mindset, afirmații pozitive, vizualizare sau legea atracției" }, { value: "c", label: "Terapie clasică bazată doar pe discuții și analiză rațională" }] },
+                { id: 14, text: "Cum preferi să lucrezi la transformarea ta?", type: "radio", options: [{ value: "a", label: "În ritmul meu, cu resurse accesibile" }, { value: "b", label: "Ghidată, lună de lună, într-o comunitate de suport" }, { value: "c", label: "Printr-un proces intensiv de grup, 90 de zile" }, { value: "d", label: "Individual, 1-la-1" }] },
+                { id: 15, text: "Dacă te-ai trezi la 3 dimineața stresată din cauza banilor sau a businessului, care ar fi gândurile care îți vin în minte? Scrie fără filtre.", type: "text", placeholder: "Scrie aici..." }
+            ],
+
+            profileDescriptions: {
+                FREEZE: {
+                    title: "Profilul tău dominant: ÎNGHEȚ (Freeze)",
+                    badge: "Reacția sistemului tău nervos: Blocaj și Evitare",
+                    diagnostic: "Când presiunea financiară crește, când trebuie să iei decizii majore de business sau să te expui, sistemul tău nervos nu luptă și nu fuge, ci pur și simplu se oprește. Intri într-o stare de paralizie subtilă, cunoscută neurobiologic sub numele de starea Dorsal-Vagală sau răspunsul de tip Freeze.\n\nCum se traduce asta în comportamentul tău de zi cu zi:\n\nProcrastinare extremă: Amâni lansările, crearea de oferte sau postările importante, deși știi exact ce ai de făcut.\n\nEvitarea cifrelor: Îți este teamă sau pur și simplu uiți să deschizi aplicațiile de banking, să verifici extrasul de cont sau să trimiți facturile la timp.\n\nCeață mentală: În fața unei decizii financiare importante, simți că mintea ți se golește de idei sau te cuprinde o oboseală bruscă și inexplicabilă.\n\nDe unde vine acest tipar?\nÎn primii ani de viață (0-7 ani), corpul tău a înregistrat că în momentele de tensiune — certuri în casă despre bani, instabilitate sau critici severe — cea mai sigură metodă de supraviețuire a fost să devii invizibilă, să nu deranjezi și să nu acționezi. Astăzi, ca adult, amigdala ta (centrul fricii) percepe responsabilitatea financiară ca pe un pericol și îți comandă să îngheți ca să te protejeze.\n\nDe ce au eșuat soluțiile clasice de până acum?\nPentru că afirmațiile pozitive sau planurile stricte de business încearcă să acceseze logica — creierul rațional. Însă când corpul tău este în Shutdown, logica este complet deconectată.\n\nSoluția optimă este eliberarea emoțională și reglarea sistemului nervos. Prin tehnica EFT (Tapping), trimitem un semnal fizic de siguranță direct către creierul tău arhaic. Studiile clinice arată că această tehnică reduce cortizolul cu până la 43%, permițând sistemului tău nervos să se relaxeze și să primească abundența fără să se mai blocheze."
+                },
+                FAWN: {
+                    title: "Profilul tău dominant: PLACAREA FINANCIARĂ (Fawn)",
+                    badge: "Reacția sistemului tău nervos: Auto-minimizare și Sacrificiu de Sine",
+                    diagnostic: "Profilul tău nu este o dovadă de slăbiciune, ci o strategie arhaică de adaptare relațională numită răspunsul Fawn. Când apare stresul legat de bani sau negocieri, sistemul tău nervos consideră că cea mai sigură metodă de a supraviețui este să se facă mic, drăguț, generos și extrem de maleabil, pentru a evita cu orice preț un eventual conflict sau refuz.\n\nCum se traduce asta în comportamentul tău de zi cu zi:\n\nSupracompensare gratuită: Adaugi bonusuri nesfârșite, ore de consultanță neplătite și servicii extra doar ca să te asiguri că celălalt este fericit și te validează.\n\nDificultatea de a spune NU: Accepți clienți toxici sau nepotriviți pentru că corpul tău intră în alertă la ideea de a seta limite ferme sau de a refuza pe cineva.\n\nAuto-minimizare constantă: Te micșorezi, te scuzi și te faci mai puțin decât ești ca să nu pari amenințătoare sau prea mult pentru ceilalți.\n\nDe unde vine acest tipar?\nÎn copilărie, ai învățat că iubirea, atenția și siguranța se primesc doar dacă ești fetița cuminte care le face pe plac celorlalți și își ascunde propriile nevoi. Ai internalizat o ecuație dureroasă: Dacă cer ce am nevoie, voi fi respinsă. Dacă mă sacrific pentru ceilalți, sunt în siguranță.\n\nDe ce au eșuat soluțiile clasice de până acum?\nSchimbarea nu vine din cuvinte, ci din siguranța viscerală. Prin tehnica EFT (Tapping), calmăm teama de respingere din corp. Studiile arată o reducere a cortizolului cu 43%. Doar când sistemul tău nervos simte că este în siguranță, vei putea să setezi limite ferme fără nicio urmă de vinovăție."
+                },
+                FLIGHT: {
+                    title: "Profilul tău dominant: FUGA (Flight)",
+                    badge: "Reacția sistemului tău nervos: Agitație și Haos Controlat",
+                    diagnostic: "Pentru tine, siguranța înseamnă mișcare continuă. Când apare anxietatea legată de bani sau de viitorul businessului tău, sistemul tău nervos intră în alertă maximă pe modul Simpatic. Te transformi într-o veritabilă mașină de acțiune, dar această acțiune nu vine din inspirație, ci dintr-o frică profundă de a nu pierde totul dacă te oprești.\n\nCum se traduce asta în comportamentul tău de zi cu zi:\n\nMuncă până la epuizare: Lucrezi 10-12 ore pe zi, sari dintr-un task în altul și simți vinovăție în momentul în care încerci să te odihnești.\n\nHaos în proiecte: Deschizi trei cursuri noi, începi două lansări simultan și schimbi strategia de marketing la fiecare câteva săptămâni, fără a finaliza ce ai început.\n\nShopping compulsiv sub stres: Când presiunea emoțională devine prea mare, simți o nevoie incontrolabilă de a cheltui bani pe lucruri sau cursuri ca să simți o ușurare temporară.\n\nDe unde vine acest tipar?\nÎn copilărie, probabil ai învățat că ești iubită și valoroasă doar dacă faci ceva sau dacă ai rezultate excepționale. Corpul tău a asociat liniștea și pauzele cu riscul de a fi respinsă. Ecuația ta internă este: Dacă mă opresc, devin vulnerabilă, sunt în pericol.\n\nDe ce au eșuat soluțiile clasice de până acum?\nCursurile clasice de organizare sau time management nu fac decât să îți dea și mai multe task-uri, alimentând exact starea de alertă a corpului tău. Tu nu ai nevoie de mai multă organizare mentală, ci de ancorare somatică.\n\nFolosind tehnica EFT (Tapping), îi demonstrăm fizic corpului tău că este în siguranță chiar și atunci când nu produce nimic. Scăzând nivelul de cortizol cu până la 43%, vei putea în sfârșit să iei decizii financiare strategice dintr-o stare de claritate și tihnă, nu din panică."
+                },
+                FIGHT: {
+                    title: "Profilul tău dominant: LUPTA FINANCIARĂ (Fight)",
+                    badge: "Reacția sistemului tău nervos: Control Rigid și Presiune Internă",
+                    diagnostic: "Sistemul tău nervos a decis că cea mai bună apărare este atacul și controlul absolut. Când vine vorba de bani, ești într-o stare permanentă de război cu circumstanțele, cu piața sau chiar cu tine însăți. Funcționezi pe o energie de forțare, iar această hiper-vigilență te epuizează masiv, chiar dacă cifrele tale din cont arată bine.\n\nCum se traduce asta în comportamentul tău de zi cu zi:\n\nIncapacitatea de a delega: Preferi să faci totul singură pentru că nimeni nu o face mai bine ca tine și îți este groază să pierzi controlul.\n\nAcumulare din frică: Deși ai bani în cont, trăiești cu o strângere de inimă la fiecare plată. Te simți vinovată când investești în confortul tău și aduni resurse dintr-o mentalitate de penurie acută.\n\nAuto-critică feroce: Te biciuiești mental pentru orice greșeală minoră și pui o presiune uriașă pe tine să atingi obiective financiare tot mai mari, fără să te bucuri vreodată de cele deja realizate.\n\nDe unde vine acest tipar?\nCopilăria ta a fost marcată de momente în care a trebuit să fii stâlpul sau în care ai simțit că nimeni nu te protejează, așa că a trebuit să devii puternică mult prea devreme. Ai integrat convingerea somatică: Lumea e periculoasă, oamenii te dezamăgesc, singura siguranță stă în controlul meu absolut.\n\nDe ce au eșuat soluțiile clasice de până acum?\nPentru că majoritatea cursurilor de business îți predau exact ceea ce faci deja în exces: structuri și mai rigide, KPI agresivi și forțare. Corpul tău nu mai are nevoie de armură, ci are nevoie de relaxare musculară și emoțională.\n\nPrin EFT (Tapping), demontăm această alertă de război din sistemul tău nervos. Reducerea cortizolului cu 43% îți va permite să lași jos controlul sufocant, să delegi cu încredere și să îți conduci businessul din flux și expansiune, nu din încrâncenare."
+                }
+            },
+
+            ctaContent: {
+                A: {
+                    title: "Sesiune Privată de Diagnoză Emoțional-Financiară",
+                    text: "Pasul tău următor nu este un alt curs generalist din care să înveți teorie. Sistemul tău nervos și-a atins capacitatea maximă de toleranță. În acest moment, corpul tău pur și simplu nu mai are spațiu să creeze, să primească și să păstreze mai mulți bani.\n\nPentru a debloca următorul nivel de prosperitate fără să intri în burnout sau autosabotaj, ai nevoie de o intervenție țintită, personalizată și profundă.\n\nTe invit să aplici pentru una dintre cele 3 Sesiuni Private de Diagnoză Emoțional-Financiară pe care le ofer în fiecare lună. În 60 de minute, vom identifica evenimentele în care corpul tău a învățat acest tipar. La sfârșitul sesiunii vei ști exact ce se întâmplă în relația ta cu banii, de unde vine și ce tip de intervenție este necesară ca să te bucuri de o schimbare reală și durabilă.",
+                    button: "Aplică pentru o Sesiune Privată de Diagnoză Emoțional-Financiară",
+                    link: "https://tidycal.com/danielabostan2020/sesiunea-de-diagnoza-reprogramarea-emotionala-a-relatiei-cu-banii"
+                },
+                B: {
+                    title: "Înscrie-te în Arhitectura Internă a Prosperității™",
+                    text: "Un program de 90 de zile bazat pe Protocolul R.E.A.L.™, creat pentru a-ți crește toleranța financiară și a elimina autosabotajul.",
+                    button: "Înscrie-te în Program",
+                    link: "https://danielabostan.ro/program.html"
+                },
+                C: {
+                    title: "Membership — Practica Prosperității Conștiente",
+                    text: "Pasul tău următor nu este să citești mai multe cărți de mindset, ci să îi oferi corpului tău experiența fizică a siguranței, săptămână de săptămână. Tiparul tău s-a format în ani de zile și nu va dispărea peste noapte printr-o simplă conștientizare la nivel rațional. Te aștept în Practica Prosperității Conștiente — un program de 12 luni în care lucrăm săptămânal, somatic și strategic, alături de o comunitate de femei care vorbesc aceeași limbă cu tine.",
+                    button: "Înscrie-te în Membership",
+                    link: "https://danielabostan.ro"
+                },
+                D: {
+                    title: "Comunitate Gratuita - Practica Prosperiţaţii Constiente",
+                    text: "Pasul tău următor este să te alături unei comunități de femei care sunt pe același drum ca tine. În Comunitatea Gratuită, vei avea acces la resurse zilnice, exerciții somatice și suport de la alte femei care într-adevăr înțeleg ce treci.",
+                    button: "Alătură-te Comunității Gratuite",
+                    link: "https://chat.whatsapp.com/LcNup7Jr2cW6XK6wX0uIkB"
+                }
+            },
+
+            currentScreen: 1,
+            currentQuestionIndex: 0,
+            answers: {},
+            scores: { FREEZE: 0, FLIGHT: 0, FIGHT: 0, FAWN: 0 },
+            dominantProfile: null,
+            currentTrajectory: 'D',
+
+            init() {
+                this.loadFromStorage();
+            },
+
+            startTest() {
+                this.currentScreen = 2;
+                this.currentQuestionIndex = 0;
+                this.answers = {};
+                this.scores = { FREEZE: 0, FLIGHT: 0, FIGHT: 0, FAWN: 0 };
+                this.showScreen(2);
+                this.displayQuestion();
+            },
+
+            displayQuestion() {
+                const question = this.questions[this.currentQuestionIndex];
+                document.getElementById('questionNumber').textContent = `Întrebarea ${this.currentQuestionIndex + 1} din 15`;
+                document.getElementById('questionText').textContent = question.text;
+
+                const progress = ((this.currentQuestionIndex + 1) / 15) * 100;
+                document.getElementById('progressFill').style.width = progress + '%';
+
+                const container = document.getElementById('optionsContainer');
+                container.innerHTML = '';
+
+                if (question.type === 'yesno') {
+                    const yesBtn = document.createElement('button');
+                    yesBtn.className = 'option';
+                    yesBtn.textContent = 'DA';
+                    yesBtn.onclick = () => this.selectAnswer('yes', question.id);
+                    container.appendChild(yesBtn);
+
+                    const noBtn = document.createElement('button');
+                    noBtn.className = 'option';
+                    noBtn.textContent = 'NU';
+                    noBtn.onclick = () => this.selectAnswer('no', question.id);
+                    container.appendChild(noBtn);
+
+                    document.getElementById('continueBtn').style.display = 'none';
+                } else if (question.type === 'radio') {
+                    question.options.forEach(opt => {
+                        const btn = document.createElement('button');
+                        btn.className = 'option';
+                        btn.textContent = opt.label;
+                        btn.onclick = () => this.selectRadio(opt.value, question.id, btn);
+                        if (this.answers[question.id] === opt.value) {
+                            btn.classList.add('selected');
+                        }
+                        container.appendChild(btn);
+                    });
+                    document.getElementById('continueBtn').style.display = 'block';
+                } else if (question.type === 'checkbox') {
+                    question.options.forEach(opt => {
+                        const label = document.createElement('label');
+                        label.className = 'option option-checkbox';
+                        const checkbox = document.createElement('input');
+                        checkbox.type = 'checkbox';
+                        checkbox.className = 'checkbox-input';
+                        checkbox.value = opt.value;
+                        checkbox.checked = this.answers[question.id] && this.answers[question.id].includes(opt.value);
+                        checkbox.onchange = () => this.selectCheckbox(question.id);
+                        label.appendChild(checkbox);
+                        label.appendChild(document.createTextNode(opt.label));
+                        container.appendChild(label);
+                    });
+                    document.getElementById('continueBtn').style.display = 'block';
+                } else if (question.type === 'text') {
+                    const textarea = document.createElement('textarea');
+                    textarea.placeholder = question.placeholder;
+                    textarea.value = this.answers[question.id] || '';
+                    textarea.onchange = () => this.selectAnswer(textarea.value, question.id);
+                    container.appendChild(textarea);
+                    document.getElementById('continueBtn').style.display = 'block';
+                }
+            },
+
+            selectAnswer(value, questionId) {
+                this.answers[questionId] = value;
+                const question = this.questions[this.currentQuestionIndex];
+
+                if (question.type === 'yesno') {
+                    if (value === 'yes' && question.profile) {
+                        this.scores[question.profile]++;
+                    }
+                    this.saveToStorage();
+                    this.nextQuestion();
+                } else {
+                    this.saveToStorage();
+                }
+            },
+
+            selectRadio(value, questionId, element) {
+                this.answers[questionId] = value;
+                document.querySelectorAll('#optionsContainer .option').forEach(opt => opt.classList.remove('selected'));
+                element.classList.add('selected');
+                this.saveToStorage();
+            },
+
+            selectCheckbox(questionId) {
+                const checkboxes = document.querySelectorAll('#optionsContainer input[type="checkbox"]:checked');
+                this.answers[questionId] = Array.from(checkboxes).map(cb => cb.value);
+                this.saveToStorage();
+            },
+
+            nextQuestion() {
+                if (this.currentQuestionIndex < this.questions.length - 1) {
+                    this.currentQuestionIndex++;
+                    this.displayQuestion();
+                } else {
+                    this.calculateResults();
+                }
+            },
+
+            previousQuestion() {
+                if (this.currentQuestionIndex > 0) {
+                    this.currentQuestionIndex--;
+                    this.displayQuestion();
+                }
+            },
+
+            calculateResults() {
+                const i14 = this.answers[14];
+
+                if (i14 === 'd') {
+                    this.currentTrajectory = 'A';
+                } else if (i14 === 'c') {
+                    this.currentTrajectory = 'B';
+                } else if (i14 === 'b') {
+                    this.currentTrajectory = 'C';
+                } else {
+                    this.currentTrajectory = 'D';
+                }
+
+                const profiles = Object.entries(this.scores).sort((a, b) => b[1] - a[1]);
+                this.dominantProfile = profiles[0][0];
+
+                this.saveToStorage();
+                this.showScreen(3);
+
+                setTimeout(() => {
+                    this.showScreen(4);
+                    this.displayResults();
+                }, 3000);
+            },
+
+            displayResults() {
+                const profileDesc = this.profileDescriptions[this.dominantProfile];
+                const ctaData = this.ctaContent[this.currentTrajectory];
+
+                let html = `
+                    <div class="profile-card">
+                        <div class="profile-title">${profileDesc.title}</div>
+                        <span class="profile-badge">${profileDesc.badge}</span>
+                        <div class="profile-text">${profileDesc.diagnostic.split('\n').join('<br><br>')}</div>
+                    </div>
+                    <div class="cta-section">
+                        <div class="cta-title">${ctaData.title}</div>
+                        <div class="cta-text">${ctaData.text}</div>
+                        <button class="cta-button" onclick="window.open('${ctaData.link}', '_blank')">${ctaData.button}</button>
+                    </div>
+                `;
+
+                document.getElementById('resultsContent').innerHTML = html;
+            },
+
+            showScreen(screenNum) {
+                document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+                const screenClass = ['.screen-start', '.screen-questions', '.screen-loading', '.screen-results'][screenNum - 1];
+                document.querySelector(screenClass).classList.add('active');
+                this.currentScreen = screenNum;
+            },
+
+            saveToStorage() {
+                const data = {
+                    currentScreen: this.currentScreen,
+                    currentQuestionIndex: this.currentQuestionIndex,
+                    answers: this.answers,
+                    scores: this.scores,
+                    dominantProfile: this.dominantProfile,
+                    currentTrajectory: this.currentTrajectory
+                };
+                localStorage.setItem('radiografia_test_data', JSON.stringify(data));
+            },
+
+            loadFromStorage() {
+                const data = localStorage.getItem('radiografia_test_data');
+                if (data) {
+                    const parsed = JSON.parse(data);
+                    this.currentScreen = parsed.currentScreen || 1;
+                    this.currentQuestionIndex = parsed.currentQuestionIndex || 0;
+                    this.answers = parsed.answers || {};
+                    this.scores = parsed.scores || { FREEZE: 0, FLIGHT: 0, FIGHT: 0, FAWN: 0 };
+                    this.dominantProfile = parsed.dominantProfile || null;
+                    this.currentTrajectory = parsed.currentTrajectory || 'D';
+                }
+            }
+        };
+
+        // Initialize app on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            app.init();
+        });
+    </script>
+</body>
+</html>

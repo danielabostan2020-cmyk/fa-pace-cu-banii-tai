@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radiografia Blocajului Tău Financiar — Bani & Bucurie</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --violet: #2D1F5E;
+    --violet-dark: #1A1035;
+    --gold: #C9A84C;
+    --cream: #FFF9F2;
+    --champagne: #F9F5F0;
+    --lavender: #EAE6F3;
+    --text: #1A1035;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--champagne);
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* ─── TYPOGRAPHY ─── */
+  h1, h2, h3 { font-family: 'Libre Baskerville', serif; line-height: 1.3; }
+  h1 { font-size: clamp(32px, 5vw, 52px); }
+  h2 { font-size: clamp(24px, 3.5vw, 38px); }
+  h3 { font-size: clamp(18px, 2.5vw, 24px); }
+
+  /* ─── HERO ─── */
+  .hero {
+    background: #3D2E72;
+    padding: 48px 24px 64px;
+    text-align: center;
+  }
+
+  .logo {
+    font-family: 'Libre Baskerville', serif;
+    color: var(--gold);
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    margin-bottom: 40px;
+    display: block;
+  }
+
+  .hero h1 {
+    color: var(--cream);
+    margin-bottom: 32px;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pain-list {
+    list-style: none;
+    max-width: 680px;
+    margin: 0 auto 32px;
+    text-align: left;
+  }
+
+  .pain-list li {
+    color: var(--cream);
+    font-size: clamp(15px, 2vw, 17px);
+    padding: 10px 0 10px 36px;
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .pain-list li:last-child { border-bottom: none; }
+
+  .pain-list li::before {
+    content: '❌';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    font-size: 14px;
+  }
+
+  .hero-subtitle {
+    color: var(--cream);
+    font-size: clamp(15px, 2vw, 18px);
+    font-style: italic;
+    max-width: 680px;
+    margin: 0 auto 20px;
+    opacity: 0.9;
+  }
+
+  .hero-desc {
+    color: var(--cream);
+    font-size: clamp(14px, 1.8vw, 16px);
+    max-width: 640px;
+    margin: 0 auto 36px;
+    opacity: 0.85;
+  }
+
+  
+
+  /* CTA Button */
+  .btn-primary {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--violet-dark);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: clamp(14px, 1.8vw, 16px);
+    padding: 18px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-width: 280px;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(201,168,76,0.35);
+  }
+
+  .btn-hint {
+    display: block;
+    color: var(--cream);
+    font-size: 13px;
+    margin-top: 12px;
+    opacity: 0.75;
+  }
+
+  /* ─── VALUE SECTION ─── */
+  .value-section {
+    background: var(--champagne);
+    padding: 72px 24px;
+    text-align: center;
+  }
+
+  .value-section h2 {
+    color: var(--text);
+    max-width: 680px;
+    margin: 0 auto 24px;
+  }
+
+  .gold-line {
+    width: 48px;
+    height: 3px;
+    background: var(--gold);
+    margin: 0 auto 32px;
+    border-radius: 2px;
+  }
+
+  .value-intro {
+    font-size: clamp(15px, 2vw, 17px);
+    max-width: 680px;
+    margin: 0 auto 48px;
+    color: var(--text);
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 32px 28px;
+    text-align: left;
+    box-shadow: 0 2px 16px rgba(45,31,94,0.07);
+    border-top: 3px solid var(--gold);
+    transition: transform 0.2s;
+  }
+
+  .card:hover { transform: translateY(-3px); }
+
+  .card-number {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 36px;
+    color: var(--gold);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .card h3 {
+    color: var(--text);
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .card p {
+    color: #4a4a6a;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ─── CREDIBILITY SECTION ─── */
+  .credibility-section {
+    background: var(--lavender);
+    padding: 72px 24px;
+    text-align: center;
+  }
+
+  .credibility-section h2 {
+    color: var(--text);
+    max-width: 680px;
+    margin: 0 auto 16px;
+  }
+
+  .credibility-intro {
+    font-size: clamp(15px, 2vw, 17px);
+    max-width: 600px;
+    margin: 0 auto 48px;
+    color: var(--text);
+  }
+
+  .cred-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .cred-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 32px 28px;
+    text-align: left;
+    box-shadow: 0 2px 16px rgba(45,31,94,0.07);
+  }
+
+  .cred-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--lavender);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+
+  .cred-card h3 {
+    color: var(--text);
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  .cred-card p {
+    color: #4a4a6a;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ─── CTA FINAL ─── */
+  .cta-section {
+    background: var(--violet);
+    padding: 72px 24px;
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    color: var(--cream);
+    max-width: 640px;
+    margin: 0 auto 20px;
+  }
+
+  .cta-desc {
+    color: var(--cream);
+    font-size: clamp(15px, 2vw, 17px);
+    max-width: 580px;
+    margin: 0 auto 36px;
+    opacity: 0.9;
+  }
+
+  .benefits-list {
+    list-style: none;
+    max-width: 400px;
+    margin: 0 auto 40px;
+    text-align: left;
+  }
+
+  .benefits-list li {
+    color: var(--cream);
+    font-size: 16px;
+    padding: 8px 0 8px 32px;
+    position: relative;
+    opacity: 0.9;
+  }
+
+  .benefits-list li::before {
+    content: '✅';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-size: 14px;
+  }
+
+  /* Form */
+  .form-card {
+    background: var(--cream);
+    border-radius: 16px;
+    padding: 40px 36px;
+    max-width: 460px;
+    margin: 0 auto;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .form-group label {
+    display: block;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid var(--lavender);
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text);
+    background: #fff;
+    transition: border-color 0.2s;
+    outline: none;
+  }
+
+  .form-group input:focus {
+    border-color: var(--gold);
+  }
+
+  .btn-submit {
+    width: 100%;
+    background: var(--gold);
+    color: var(--violet-dark);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 8px;
+  }
+
+  .btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(201,168,76,0.4);
+  }
+
+  .form-note {
+    color: #6b6b8a;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 14px;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--violet-dark);
+    padding: 28px 24px;
+    text-align: center;
+  }
+
+  footer p {
+    color: var(--cream);
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  footer span {
+    color: var(--gold);
+    font-size: 13px;
+  }
+
+  /* ─── ABOUT SECTION ─── */
+  .about-section {
+    background: var(--champagne);
+    padding: 72px 24px;
+  }
+
+  .about-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 56px;
+    align-items: stretch;
+  }
+
+  .about-photo {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    object-position: top center;
+    height: 100%;
+    min-height: 380px;
+    box-shadow: 0 12px 48px rgba(45,31,94,0.15);
+    border: 3px solid var(--gold);
+    background: var(--lavender);
+    display: block;
+  }
+
+  .about-tag {
+    display: inline-block;
+    background: var(--lavender);
+    color: var(--violet);
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 0.03em;
+  }
+
+  .about-content p {
+    color: #4a4a6a;
+    font-size: clamp(15px, 1.8vw, 16px);
+    line-height: 1.8;
+  }
+
+  .about-divider {
+    width: 40px;
+    height: 3px;
+    background: var(--gold);
+    border-radius: 2px;
+    margin: 24px 0;
+  }
+
+  @media (max-width: 720px) {
+    .about-inner {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .about-photo {
+      max-width: 280px;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  /* ─── FADE IN ANIMATION ─── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fade-in { opacity: 1; transform: none; transition: none; }
+  }
+
+  /* ─── MOBILE ─── */
+  @media (max-width: 600px) {
+    .hero { padding: 36px 20px 48px; }
+    .btn-primary { min-width: 100%; padding: 16px 24px; }
+    .form-card { padding: 28px 20px; }
+    .value-section, .credibility-section, .cta-section { padding: 52px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <span class="logo" style="display:none">Daniela Bostan</span>
+
+  <h1>Te simți frustrată că...</h1>
+
+  <ul class="pain-list">
+    <li>Te plafonezi la aceeași sumă de luni de zile, indiferent ce strategii noi aplici?</li>
+    <li>Muncești până la epuizare 10-12 ore pe zi și simți vinovăție când încerci să te odihnești?</li>
+    <li>Îți pui prețuri mult prea mici sau reduci tarifele preventiv de frica de a nu fi refuzată?</li>
+    <li>Amâni să-ți verifici cifrele, extrasul de cont sau taxele, sperând în secret că va fi bine?</li>
+  </ul>
+
+  <p class="hero-subtitle">...deși investești timp, bani și energie în cursuri de marketing, strategii de business și tehnici de mindset?</p>
+
+  <p class="hero-desc">Descoperă în 3 minute ce tipar somatic îți blochează subconștientul și de ce corpul tău respinge, de fapt, creșterea veniturilor.</p>
+
+  
+
+  <a href="#formular" class="btn-primary">Începe Radiografia Blocajului Financiar — Gratuit</a>
+  <span class="btn-hint">⏱️ Durează 3 minute &nbsp;·&nbsp; 📊 Rezultate instantanee pe ecran</span>
+</section>
+
+<!-- ═══ VALOARE ═══ -->
+<section class="value-section">
+  <h2 class="fade-in">Schimbarea reală nu vine din mintea rațională, ci din starea de siguranță a corpului tău</h2>
+  <div class="gold-line"></div>
+
+  <p class="value-intro fade-in">
+    Blocajul tău financiar nu este o lipsă de inteligență, de voință sau de strategie. Este pur și simplu un mecanism automat prin care corpul tău încearcă să te protejeze.<br><br>
+    Când vine vorba de bani mai mulți, de succes sau de responsabilitatea care vine odată cu ei, centrul de alarmă al creierului tău percepe toată această presiune ca pe un pericol real. În acea secundă, subconștientul tău preia controlul și activează instant una dintre cele 4 reacții de supraviețuire: Freeze, Flight, Fight sau Fawn.
+  </p>
+
+  <div class="cards-grid">
+    <div class="card fade-in">
+      <div class="card-number">01</div>
+      <h3>Profilul Somatic Dominant</h3>
+      <p>Identificăm exact care dintre cele 4 reacții de alertă (Freeze, Flight, Fight sau Fawn) îți blochează corpul și te ține în procrastinare, epuizare sau auto-minimizare.</p>
+    </div>
+    <div class="card fade-in">
+      <div class="card-number">02</div>
+      <h3>Nivelul de Activare al Blocajului</h3>
+      <p>Evaluăm cât de profund este ancorat acest tipar de protecție în sistemul tău nervos și cum îți sabotează deciziile zilnice de business și viață.</p>
+    </div>
+    <div class="card fade-in">
+      <div class="card-number">03</div>
+      <h3>Traseul Optim de Deblocare</h3>
+      <p>Primești o diagnoză precisă și pașii următori adaptați profilului tău (Freeze, Flight, Fight sau Fawn) pentru a reînvăța sistemul nervos să primească abundența în siguranță.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CREDIBILITATE ═══ -->
+<section class="credibility-section">
+  <h2 class="fade-in">O metodologie bazată pe neurobiologie și psihologie financiară</h2>
+  <div class="gold-line"></div>
+  <p class="credibility-intro fade-in">Această radiografie nu este un test generic. Întrebările și algoritmul integrat au la bază:</p>
+
+  <div class="cred-cards">
+    <div class="cred-card fade-in">
+      <div class="cred-icon">🧠</div>
+      <h3>Dr. Brad Klontz</h3>
+      <p>Cercetările sale în psihologia financiară au stat la baza construirii acestui instrument de profilare.</p>
+    </div>
+    <div class="cred-card fade-in">
+      <div class="cred-icon">🔬</div>
+      <h3>Teoria Polivagală</h3>
+      <p>Studiile privind trauma somatică aplicată în business explică de ce strategiile clasice nu funcționează când corpul e în alertă.</p>
+    </div>
+    <div class="cred-card fade-in">
+      <div class="cred-icon">⚡</div>
+      <h3>Protocoalele EFT Tapping</h3>
+      <p>Dovedit clinic: această tehnică reduce cortizolul cu până la 43%, permițând sistemului nervos să se relaxeze.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DESPRE DANIELA ═══ -->
+<section class="about-section">
+  <div class="about-inner">
+    <img
+      src="/daniela-alb.png"
+      alt="Daniela Bostan — Practician EFT și Matrix Reimprinting"
+      class="about-photo fade-in"
+    >
+
+    <div class="about-content fade-in">
+      <span class="about-tag">Practician EFT / Matrix Reimprinting</span>
+      <div class="about-divider"></div>
+      <p>
+        Am creat această Radiografie a Blocajelor Financiare din propria mea frustrare: oricât de multe strategii aplicam, corpul meu pur și simplu îngheța când trebuia să mă expun sau să cresc financiar.
+      </p>
+      <div class="about-divider"></div>
+      <p>
+        Am înțeles că blocajul nu era doar în mintea mea, ci mai ales în sistemul meu nervos. Mi-am dedicat ultimii ani studierii profunde a acestor blocaje și am pus această metodologie într-un algoritm rapid de 3 minute — pentru ca tu să nu mai pierzi luni de zile în confuzie, ci să afli instant ce te oprește.
+      </p>
+      <div class="about-divider"></div>
+      <p style="font-family: 'Libre Baskerville', serif; color: var(--violet); font-style: italic; font-size: 15px;">
+        — Daniela Bostan
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA FINAL ═══ -->
+<section class="cta-section" id="formular">
+  <h2 class="fade-in">Descoperă ce se ascunde în spatele blocajului tău financiar</h2>
+
+  <p class="cta-desc fade-in">
+    Dacă strategiile și afirmațiile pozitive ar fi suficiente, tu ai fi deja la nivelul de venituri dorit. Adevărul se află în memoria corpului tău. Încetează să te mai lupți cu tine însăți și află exact care este tiparul subconștient care îți sabotează următorul nivel.
+  </p>
+
+  <ul class="benefits-list fade-in">
+    <li>100% Gratuit — fără card de credit</li>
+    <li>Durează mai puțin de 3 minute</li>
+    <li>Rezultate dinamice personalizate pe loc</li>
+  </ul>
+
+  <div class="form-card fade-in">
+    <form id="lead-form">
+      <div class="form-group">
+        <label for="nume">Prenumele tău</label>
+        <input type="text" id="nume" name="nume" placeholder="ex: Andreea" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Adresa ta de email</label>
+        <input type="email" id="email" name="email" placeholder="ex: andreea@email.com" required>
+      </div>
+      <div class="gdpr-row" style="display:flex; gap:10px; align-items:flex-start; margin-bottom:16px;">
+        <input type="checkbox" id="gdpr-check" style="width:18px; height:18px; flex-shrink:0; margin-top:3px;">
+        <label for="gdpr-check" style="text-transform:none; letter-spacing:0; font-weight:400; font-size:13px;">
+          Sunt de acord să primesc rezultatele și comunicări de la Daniela Bostan — Bani & Bucurie. Mă pot dezabona oricând.
+        </label>
+      </div>
+      <button type="submit" class="btn-submit">Vreau Radiografia Blocajului Financiar 📊</button>
+      <p class="form-note" id="form-status">Datele tale sunt în siguranță. Zero spam.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <p>© Daniela Bostan</p>
+  <span>Practician EFT & Matrix Reimprinting</span>
+</footer>
+
+<script>
+  // Fade-in la scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Captare email — JSONP către Newsman (același formular ca la test-rani-financiare.html)
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  const NEWSMAN_JSONP_URL = 'https://nl.danielabostan.ro/subscribejsonp/16541/6a39736d1fbbbf5a06a2fa9c/d261d86f731de370846856cc88cd6fbd';
+
+  function subscribeToNewsman(email, name) {
+    return new Promise((resolve, reject) => {
+      const callbackName = 'nzmCallback_' + Date.now();
+      const script = document.createElement('script');
+
+      const cleanup = () => {
+        delete window[callbackName];
+        script.remove();
+      };
+
+      window[callbackName] = function(data) {
+        cleanup();
+        if (data && data.err === false) {
+          resolve(data);
+        } else {
+          reject(data);
+        }
+      };
+
+      const params = new URLSearchParams({
+        email: email,
+        fname: name,
+        agree_tc: '1',
+        source: 'radiografie',
+        callback: callbackName
+      });
+
+      script.src = `${NEWSMAN_JSONP_URL}?${params.toString()}`;
+      script.onerror = () => {
+        cleanup();
+        reject(new Error('Newsman JSONP request failed to load'));
+      };
+      document.body.appendChild(script);
+    });
+  }
+
+  document.getElementById('lead-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const nume = document.getElementById('nume').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const gdprCheck = document.getElementById('gdpr-check');
+    const status = document.getElementById('form-status');
+    const submitBtn = document.querySelector('.btn-submit');
+
+    status.style.color = '';
+
+    if (!nume) {
+      status.textContent = '⚠️ Te rog completează prenumele.';
+      status.style.color = '#B3492E';
+      return;
+    }
+    if (!validateEmail(email)) {
+      status.textContent = '⚠️ Te rog introdu o adresă de email validă.';
+      status.style.color = '#B3492E';
+      return;
+    }
+    if (!gdprCheck.checked) {
+      status.textContent = '⚠️ Te rog bifează acordul de mai sus pentru a continua.';
+      status.style.color = '#B3492E';
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Se trimite...';
+    status.textContent = '';
+
+    subscribeToNewsman(email, nume).then(function() {
+      window.location.href = '/test-radiografie.html';
+    }).catch(function(data) {
+      console.error('Abonarea Newsman a eșuat:', data);
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Vreau Radiografia Blocajului Financiar 📊';
+      status.textContent = 'Nu am putut înregistra abonarea. Te rog încearcă din nou.';
+      status.style.color = '#B3492E';
+    });
+  });
+</script>
+
+</body>
+</html>
