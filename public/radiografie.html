@@ -43,10 +43,51 @@
 
   /* ─── HERO ─── */
   .hero {
-    background: #3D2E72;
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse 900px 600px at 88% -8%, rgba(201,168,76,0.24), transparent 62%),
+      linear-gradient(160deg, #4A3A80 0%, #2D1F5E 48%, #1A1035 100%);
     padding: 48px 24px 64px;
     text-align: center;
   }
+
+  .hero .scanlines {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.035) 0px,
+      rgba(255,255,255,0.035) 1px,
+      transparent 1px,
+      transparent 10px
+    );
+    pointer-events: none;
+  }
+
+  .hero .glow-orb {
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.30) 0%, rgba(201,168,76,0) 70%);
+    top: -220px;
+    right: -120px;
+    pointer-events: none;
+  }
+
+  .hero .glow-orb-2 {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(122,98,196,0.28) 0%, rgba(122,98,196,0) 70%);
+    bottom: -160px;
+    left: -100px;
+    pointer-events: none;
+  }
+
+  .hero > * { position: relative; z-index: 1; }
 
   .logo {
     font-family: 'Libre Baskerville', serif;
@@ -535,6 +576,9 @@
 
 <!-- ═══ HERO ═══ -->
 <section class="hero">
+  <div class="scanlines"></div>
+  <div class="glow-orb"></div>
+  <div class="glow-orb-2"></div>
   <span class="logo" style="display:none">Daniela Bostan</span>
 
   <h1>Te simți frustrată că...</h1>
