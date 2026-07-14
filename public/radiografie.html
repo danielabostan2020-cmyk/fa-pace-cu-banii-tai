@@ -270,10 +270,51 @@
 
   /* ─── CTA FINAL ─── */
   .cta-section {
-    background: var(--violet);
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse 900px 600px at 10% 108%, rgba(201,168,76,0.22), transparent 62%),
+      linear-gradient(20deg, #4A3A80 0%, #2D1F5E 48%, #1A1035 100%);
     padding: 72px 24px;
     text-align: center;
   }
+
+  .cta-section .scanlines {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.035) 0px,
+      rgba(255,255,255,0.035) 1px,
+      transparent 1px,
+      transparent 10px
+    );
+    pointer-events: none;
+  }
+
+  .cta-section .glow-orb {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.26) 0%, rgba(201,168,76,0) 70%);
+    bottom: -200px;
+    left: -100px;
+    pointer-events: none;
+  }
+
+  .cta-section .glow-orb-2 {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(122,98,196,0.26) 0%, rgba(122,98,196,0) 70%);
+    top: -140px;
+    right: -100px;
+    pointer-events: none;
+  }
+
+  .cta-section > * { position: relative; z-index: 1; }
 
   .cta-section h2 {
     color: var(--cream);
@@ -598,6 +639,10 @@
 
 <!-- ═══ CTA FINAL ═══ -->
 <section class="cta-section" id="formular">
+  <div class="scanlines"></div>
+  <div class="glow-orb"></div>
+  <div class="glow-orb-2"></div>
+
   <h2 class="fade-in">Descoperă ce se ascunde în spatele blocajului tău financiar</h2>
 
   <p class="cta-desc fade-in">
