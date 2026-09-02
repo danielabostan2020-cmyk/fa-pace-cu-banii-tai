@@ -42,7 +42,7 @@ export default function EftTestimoniale() {
         <div className="testi-grid testi-grid-3">
           {testimoniale.map((t, i) => (
             <FadeIn key={t.theme} delay={(i % 3) as 0 | 1 | 2} className="testi-card">
-              <div className="testi-stars">
+              <div className="testi-stars" aria-hidden="true">
                 {[...Array(5)].map((_, j) => <span key={j} className="testi-star" />)}
               </div>
               <span className="testi-theme">{t.theme}</span>

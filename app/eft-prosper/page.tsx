@@ -15,18 +15,22 @@ import EftClosing from '@/components/EftClosing'
 import Footer from '@/components/Footer'
 import EftStickyCta from '@/components/EftStickyCta'
 import CookieBanner from '@/components/CookieBanner'
+import { eftFaqs } from '@/components/eftFaqData'
 
 const title = 'EFT Prosper — Kitul Rănilor Financiare'
 const description =
   'Eliberează blocajele subconștiente, vindecă rănile financiare profunde și redobândește-ți siguranța interioară de a atrage și păstra banii — prin metoda eliberării somatice EFT Prosper.'
 
+const url = 'https://www.danielabostan.ro/eft-prosper.html'
+
 export const metadata: Metadata = {
   title,
   description,
+  alternates: { canonical: url },
   openGraph: {
     title,
     description,
-    url: 'https://www.danielabostan.ro/eft-prosper.html',
+    url,
     type: 'website',
     images: ['https://www.danielabostan.ro/og-eft-prosper.png'],
   },
@@ -38,9 +42,23 @@ export const metadata: Metadata = {
   },
 }
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: eftFaqs.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+}
+
 export default function EftProsperPage() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <EftHero />
       <EftAgitare />
       <EftDeceEsueaza />

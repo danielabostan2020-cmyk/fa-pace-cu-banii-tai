@@ -28,8 +28,12 @@ export default function EftStickyCta() {
     }
 
     window.addEventListener('scroll', update, { passive: true })
+    window.addEventListener('resize', update, { passive: true })
     update()
-    return () => window.removeEventListener('scroll', update)
+    return () => {
+      window.removeEventListener('scroll', update)
+      window.removeEventListener('resize', update)
+    }
   }, [])
 
   return (

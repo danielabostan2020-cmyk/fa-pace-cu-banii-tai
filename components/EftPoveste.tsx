@@ -14,7 +14,7 @@ export default function EftPoveste() {
           <div className="founder-story-body founder-story-body--flex">
             <div className="founder-photo">
               <Image
-                src="/daniela-alb.png"
+                src="/daniela-alb.webp"
                 alt="Daniela Bostan — EFT Practitioner, Matrix Reimprinting Specialist"
                 width={210}
                 height={310}

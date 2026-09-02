@@ -40,7 +40,7 @@ export default function EftHero() {
 
           <FadeIn delay={2} className="hero-photo-col">
             <Image
-              src="/daniela-eft-prosper.png"
+              src="/daniela-eft-prosper.webp"
               alt="Daniela Bostan — EFT Practitioner, Matrix Reimprinting"
               width={340}
               height={512}
