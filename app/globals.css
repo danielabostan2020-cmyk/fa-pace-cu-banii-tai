@@ -1275,4 +1275,72 @@ footer a:hover { text-decoration: underline; }
   .founder-story-body--flex .founder-photo { max-width: 200px; }
 }
 
+/* ══════════════════════════════════════
+   EFT PROSPER — page-specific additions
+══════════════════════════════════════ */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+@media (max-width: 640px) { .grid-2 { grid-template-columns: 1fr; } }
+
+.module-card .md-icon { font-size: 1.5rem; display: block; margin-bottom: 10px; }
+.module-card .md-row { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border-light); }
+.module-card .md-label {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  display: block;
+  margin-bottom: 4px;
+}
+.module-card .md-text {
+  font-family: var(--font-lora), serif;
+  font-size: 0.85rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.steps-list { max-width: 720px; margin-top: 8px; }
+.step-item {
+  display: flex;
+  gap: 22px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+}
+.step-item:last-child { border-bottom: none; }
+.step-num {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--violet-deep);
+  color: var(--gold);
+  font-family: var(--font-cormorant), serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step-item h3 { color: var(--violet-deep); margin-bottom: 6px; }
+.step-item p { font-size: 0.9375rem; color: var(--text-mid); margin: 0; }
+.step-item p + p { margin-top: 8px; }
+
+.hero-trust {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+}
+.hero-trust span {
+  font-family: var(--font-lora), serif;
+  font-size: 0.85rem;
+  color: rgba(255,249,242,0.62);
+}
+
 .hidden { display: none !important; }
