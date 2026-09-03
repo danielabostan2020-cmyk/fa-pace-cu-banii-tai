@@ -26,6 +26,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.danielabostan.ro'),
   title: 'Fă pace cu banii tăi — Membership modular',
   description:
     'Membership modular pentru reconstrucția relației cu banii. 12 module, lucru somatic și emoțional, ghidaj live cu Daniela Bostan — EFT Practitioner.',

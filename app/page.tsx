@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Hero from '@/components/Hero'
 import Problema from '@/components/Problema'
 import TestimonialeTimurii from '@/components/TestimonialeTimurii'
@@ -18,6 +19,32 @@ import Closing from '@/components/Closing'
 import Footer from '@/components/Footer'
 import StickyCta from '@/components/StickyCta'
 import CookieBanner from '@/components/CookieBanner'
+
+const title = 'Fă pace cu banii tăi — Membership modular'
+const description =
+  '12 luni de transformare profundă: de la anxietate financiară la prosperitate sustenabilă, prin siguranță interioară. 12 module, 24 de sesiuni live, garanție 14 zile.'
+
+const url = '/'
+const ogImage = '/og-fa-pace-cu-banii-tai.png'
+
+export const metadata: Metadata = {
+  title,
+  description,
+  alternates: { canonical: url },
+  openGraph: {
+    title,
+    description,
+    url,
+    type: 'website',
+    images: [ogImage],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description,
+    images: [ogImage],
+  },
+}
 
 export default function Home() {
   return (

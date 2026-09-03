@@ -11,21 +11,25 @@ const title = 'Test Rapid de Identificare a Rănilor Financiare'
 const description =
   'Descoperă în doar 5 minute ce anume îți sabotează relația cu banii – și care este primul pas spre abundență și stabilitate financiară.'
 
+const url = '/rani-financiare.html'
+const ogImage = '/og-test-rani-financiare.png'
+
 export const metadata: Metadata = {
   title,
   description,
+  alternates: { canonical: url },
   openGraph: {
     title,
     description,
-    url: 'https://danielabostan.ro/rani-financiare.html',
+    url,
     type: 'website',
-    images: ['https://danielabostan.ro/og-test-rani-financiare.png'],
+    images: [ogImage],
   },
   twitter: {
     card: 'summary_large_image',
     title,
     description,
-    images: ['https://danielabostan.ro/og-test-rani-financiare.png'],
+    images: [ogImage],
   },
 }
 

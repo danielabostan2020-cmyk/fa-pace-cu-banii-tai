@@ -21,7 +21,8 @@ const title = 'EFT Prosper — Kitul Rănilor Financiare'
 const description =
   'Eliberează blocajele subconștiente, vindecă rănile financiare profunde și redobândește-ți siguranța interioară de a atrage și păstra banii — prin metoda eliberării somatice EFT Prosper.'
 
-const url = 'https://www.danielabostan.ro/eft-prosper.html'
+const url = '/eft-prosper.html'
+const ogImage = '/og-eft-prosper.png'
 
 export const metadata: Metadata = {
   title,
@@ -32,13 +33,13 @@ export const metadata: Metadata = {
     description,
     url,
     type: 'website',
-    images: ['https://www.danielabostan.ro/og-eft-prosper.png'],
+    images: [ogImage],
   },
   twitter: {
     card: 'summary_large_image',
     title,
     description,
-    images: ['https://www.danielabostan.ro/og-eft-prosper.png'],
+    images: [ogImage],
   },
 }
 
