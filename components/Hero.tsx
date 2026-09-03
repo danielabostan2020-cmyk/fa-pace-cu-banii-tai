@@ -43,7 +43,7 @@ export default function Hero() {
 
           <FadeIn delay={2} className="hero-photo-col">
             <Image
-              src="/daniela-bostan.png"
+              src="/daniela-bostan.jpg"
               alt="Daniela Bostan — EFT Practitioner & Matrix Reimprinting Specialist"
               width={340}
               height={420}
