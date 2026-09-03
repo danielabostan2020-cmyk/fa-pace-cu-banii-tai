@@ -132,7 +132,7 @@ export default function EftModule() {
 
         <div className="container" style={{ padding: 0, marginBottom: 24 }}>
           <FadeIn as="h3" style={{ color: 'var(--violet-deep)', marginBottom: 24 }}>
-            Bonusuri speciale de lansare
+            Bonusuri incluse în pachet
           </FadeIn>
         </div>
         <div className="grid-2">

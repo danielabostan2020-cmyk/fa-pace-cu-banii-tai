@@ -21,9 +21,22 @@ export default function Footer({ disclaimer = defaultDisclaimer }: { disclaimer?
             <a href="mailto:contact@danielabostan.ro">contact@danielabostan.ro</a>
           </p>
           <p className="footer-legal">
-            <a href="#">Politică de confidențialitate</a>
+            <a href="/politica-confidentialitate.html">Politică de confidențialitate</a>
             &nbsp;·&nbsp;
-            <a href="#">Termeni și condiții</a>
+            <a href="/termeni-conditii.html">Termeni și condiții</a>
+          </p>
+          <p className="footer-legal">
+            <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="noopener noreferrer">
+              ANPC — Soluționarea Alternativă a Litigiilor
+            </a>
+            &nbsp;·&nbsp;
+            <a
+              href="https://ec.europa.eu/consumers/odr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Soluționarea Online a Litigiilor
+            </a>
           </p>
         </div>
       </footer>
