@@ -151,7 +151,7 @@ export default function PoliticaConfidentialitatePage() {
           <strong>Rectificare</strong> — să corectezi datele greșite sau incomplete.
         </li>
         <li>
-          <strong>Ștergere</strong> („dreptul de a fi uitată") — cu excepția datelor pe care sunt
+          <strong>Ștergere</strong> („dreptul de a fi uitată”) — cu excepția datelor pe care sunt
           obligată legal să le păstrez, cum sunt facturile.
         </li>
         <li>

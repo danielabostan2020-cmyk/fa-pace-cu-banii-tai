@@ -9,11 +9,11 @@
 
 export const legal = {
   /** Denumirea exactă din certificatul de înregistrare (ex. „Bostan Daniela PFA") */
-  entitate: 'COMPLETEAZĂ — denumirea legală (PFA / II / SRL)',
+  entitate: 'BOSTAN GH DANIELA PERSOANĂ FIZICĂ AUTORIZATĂ',
   /** Codul unic de înregistrare / CIF */
-  cui: 'COMPLETEAZĂ — CUI/CIF',
+  cui: '52797873',
   /** Nr. de ordine în Registrul Comerțului sau nr. din Registrul Comerțului pentru PFA */
-  regCom: 'COMPLETEAZĂ — nr. Registrul Comerțului',
+  regCom: 'F2025043030009',
   /** Sediul social / profesional, așa cum apare în acte */
   sediu: 'COMPLETEAZĂ — adresa sediului',
   email: 'contact@danielabostan.ro',
@@ -21,7 +21,7 @@ export const legal = {
   telefon: '',
   site: 'https://www.danielabostan.ro',
   /** Regimul de TVA, afisat langa preturi. Alege una dintre cele doua variante. */
-  tva: 'COMPLETEAZĂ — fie „Toate prețurile sunt finale. Nu sunt plătitoare de TVA.”, fie „Toate prețurile includ TVA.”',
+  tva: 'Toate prețurile sunt finale. Nu sunt plătitoare de TVA.',
   /** Data ultimei revizuiri, afișată în capul fiecărei pagini legale */
   actualizat: '3 septembrie 2026',
 } as const

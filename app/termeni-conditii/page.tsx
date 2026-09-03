@@ -28,7 +28,7 @@ export default function TermeniConditiiPage() {
       <p>
         Programele de pe acest site sunt oferite de <strong>{legal.entitate}</strong>, cu sediul în{' '}
         {legal.sediu}, CUI {legal.cui}, înregistrată la Registrul Comerțului sub nr.{' '}
-        {legal.regCom}, denumită în continuare „Vânzătorul" sau „eu".
+        {legal.regCom}, denumită în continuare „Vânzătorul” sau „eu”.
       </p>
       <p>
         Contact: <a href={`mailto:${legal.email}`}>{legal.email}</a>
