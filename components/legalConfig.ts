@@ -15,7 +15,7 @@ export const legal = {
   /** Nr. de ordine în Registrul Comerțului sau nr. din Registrul Comerțului pentru PFA */
   regCom: 'F2025043030009',
   /** Sediul social / profesional, așa cum apare în acte */
-  sediu: 'COMPLETEAZĂ — adresa sediului',
+  sediu: 'Fundătura Fabricii nr. 18, Târgu Neamț, județul Neamț',
   email: 'contact@danielabostan.ro',
   /** Opțional. Lasă string gol dacă nu vrei să afișezi un telefon. */
   telefon: '',
