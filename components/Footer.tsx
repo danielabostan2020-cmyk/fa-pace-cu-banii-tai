@@ -20,6 +20,11 @@ export default function Footer({ disclaimer = defaultDisclaimer }: { disclaimer?
             © 2026 Daniela Bostan &nbsp;·&nbsp;{' '}
             <a href="mailto:contact@danielabostan.ro">contact@danielabostan.ro</a>
           </p>
+          <p className="footer-nav">
+            <a href="/eft-prosper.html">Kitul EFT Prosper</a>
+            &nbsp;·&nbsp;
+            <a href="/rani-financiare.html">Testul Rănilor Financiare</a>
+          </p>
           <p className="footer-legal">
             <a href="/politica-confidentialitate.html">Politică de confidențialitate</a>
             &nbsp;·&nbsp;

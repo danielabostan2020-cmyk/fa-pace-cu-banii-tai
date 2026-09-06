@@ -1543,3 +1543,10 @@ footer a:hover { text-decoration: underline; }
   .ty-body { padding: 60px 0 76px; }
   .ty-step { padding: 22px 20px; gap: 16px; }
 }
+
+.footer-nav { margin-top: 14px; }
+.footer-nav a {
+  font-family: var(--font-lora), serif;
+  font-size: 0.85rem;
+  color: rgba(255,249,242,0.55);
+}
