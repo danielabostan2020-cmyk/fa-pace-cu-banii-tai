@@ -1,5 +1,11 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "out",
-  "installCommand": "npm install"
+  "installCommand": "npm install",
+  "rewrites": [
+    {
+      "source": "/eft-prosper-multumesc",
+      "destination": "/eft-prosper-multumesc.html"
+    }
+  ]
 }
