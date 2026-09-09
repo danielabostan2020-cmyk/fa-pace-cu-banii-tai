@@ -7,28 +7,33 @@ import TestPoveste from '@/components/TestPoveste'
 import Footer from '@/components/Footer'
 import CookieBanner from '@/components/CookieBanner'
 
-const title = 'Test Rapid de Identificare a Rănilor Financiare'
+// Titlul lung e pentru Google; cel scurt e pentru rețele sociale. Facebook taie
+// titlul unei previzualizări din comentariu pe la 30 de caractere, iar linkurile
+// se distribuie tocmai în comentarii — un titlu lung s-ar tăia fix unde contează.
+const title = 'Testul Rănilor Financiare — test gratuit, 5 minute'
+const shortTitle = 'Testul Rănilor Financiare'
 const description =
   'Descoperă în doar 5 minute ce anume îți sabotează relația cu banii – și care este primul pas spre abundență și stabilitate financiară.'
+const shortDescription = 'Află care dintre cele 6 răni financiare te blochează acum.'
 
 const url = '/rani-financiare.html'
-const ogImage = '/og-test-rani-financiare.png'
+const ogImage = '/og-test-rani-financiare-v2.png'
 
 export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: url },
   openGraph: {
-    title,
-    description,
+    title: shortTitle,
+    description: shortDescription,
     url,
     type: 'website',
     images: [ogImage],
   },
   twitter: {
     card: 'summary_large_image',
-    title,
-    description,
+    title: shortTitle,
+    description: shortDescription,
     images: [ogImage],
   },
 }
