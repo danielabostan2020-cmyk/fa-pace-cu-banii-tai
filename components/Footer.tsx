@@ -1,3 +1,5 @@
+import { moduleDisponibile } from './moduleData'
+
 const defaultDisclaimer =
   'Fă pace cu banii tăi este un program educațional și transformațional. Programul nu ' +
   'oferă consultanță financiară, fiscală, juridică, medicală sau psihoterapie ' +
@@ -21,6 +23,12 @@ export default function Footer({ disclaimer = defaultDisclaimer }: { disclaimer?
             <a href="mailto:contact@danielabostan.ro">contact@danielabostan.ro</a>
           </p>
           <p className="footer-nav">
+            {moduleDisponibile > 0 && (
+              <>
+                <a href="/module.html">Module individuale</a>
+                &nbsp;·&nbsp;
+              </>
+            )}
             <a href="/eft-prosper.html">Kitul EFT Prosper</a>
             &nbsp;·&nbsp;
             <a href="/rani-financiare.html">Testul Rănilor Financiare</a>

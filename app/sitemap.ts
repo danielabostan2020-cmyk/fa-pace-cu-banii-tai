@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next'
+import { moduleDisponibile } from '@/components/moduleData'
 
 // Necesar cu `output: 'export'` — altfel build-ul refuză ruta ca fiind dinamică.
 export const dynamic = 'force-static'
@@ -30,6 +31,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    // Catalogul intră în sitemap abia când primul modul are link de plată.
+    ...(moduleDisponibile > 0
+      ? [
+          {
+            url: `${BASE}/module.html`,
+            lastModified: '2026-09-07',
+            changeFrequency: 'monthly' as const,
+            priority: 0.8,
+          },
+        ]
+      : []),
     {
       url: `${BASE}/rani-financiare.html`,
       lastModified: '2026-09-06',

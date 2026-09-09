@@ -6,6 +6,10 @@
     {
       "source": "/eft-prosper-multumesc",
       "destination": "/eft-prosper-multumesc.html"
+    },
+    {
+      "source": "/module-multumesc",
+      "destination": "/module-multumesc.html"
     }
   ],
   "redirects": [
@@ -57,6 +61,11 @@
     {
       "source": "/termeni-conditii",
       "destination": "/termeni-conditii.html",
+      "permanent": true
+    },
+    {
+      "source": "/module",
+      "destination": "/module.html",
       "permanent": true
     }
   ]
