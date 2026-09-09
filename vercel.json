@@ -7,5 +7,17 @@
       "source": "/eft-prosper-multumesc",
       "destination": "/eft-prosper-multumesc.html"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/membership.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/membership",
+      "destination": "/",
+      "permanent": true
+    }
   ]
 }
