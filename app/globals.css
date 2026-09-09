@@ -1550,3 +1550,78 @@ footer a:hover { text-decoration: underline; }
   font-size: 0.85rem;
   color: rgba(255,249,242,0.55);
 }
+
+/* ══════════════════════════════════════
+   PAGINA 404
+══════════════════════════════════════ */
+.nf-hero {
+  background: linear-gradient(135deg, var(--violet-deep) 0%, var(--violet-dark) 55%, var(--violet-deepest) 100%);
+  color: var(--white);
+  padding: 104px 0 84px;
+  text-align: center;
+}
+.nf-hero .section-label { margin-bottom: 14px; }
+.nf-hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 22px; }
+.nf-lede {
+  font-family: var(--font-lora), serif;
+  font-size: 1.0625rem;
+  line-height: 1.85;
+  color: rgba(255,249,242,0.72);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.nf-body { background: var(--bg-off); padding: 76px 0 88px; }
+.nf-links { display: grid; gap: 16px; margin-bottom: 40px; }
+.nf-link {
+  display: block;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius-md);
+  padding: 24px 28px;
+  text-decoration: none;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.nf-link:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+.nf-link h2 {
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  color: var(--violet-deep);
+  margin-bottom: 6px;
+}
+.nf-link p {
+  font-family: var(--font-lora), serif;
+  font-size: 0.9375rem;
+  color: var(--text-mid);
+  margin-bottom: 10px;
+}
+.nf-go {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-hover);
+}
+.nf-help {
+  font-family: var(--font-lora), serif;
+  font-size: 0.9375rem;
+  color: var(--text-light);
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto;
+}
+.nf-help a { color: var(--gold-hover); }
+
+@media (prefers-reduced-motion: reduce) {
+  .nf-link { transition: none; }
+  .nf-link:hover { transform: none; }
+}
+@media (max-width: 768px) {
+  .nf-hero { padding: 76px 0 60px; }
+  .nf-body { padding: 54px 0 68px; }
+  .nf-link { padding: 20px 22px; }
+}

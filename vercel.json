@@ -20,6 +20,11 @@
       "permanent": true
     },
     {
+      "source": "/program.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/eft-prosper",
       "destination": "/eft-prosper.html",
       "permanent": true
