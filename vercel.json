@@ -18,6 +18,41 @@
       "source": "/membership",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/eft-prosper",
+      "destination": "/eft-prosper.html",
+      "permanent": true
+    },
+    {
+      "source": "/rani-financiare",
+      "destination": "/rani-financiare.html",
+      "permanent": true
+    },
+    {
+      "source": "/test-rani-financiare",
+      "destination": "/test-rani-financiare.html",
+      "permanent": true
+    },
+    {
+      "source": "/radiografie",
+      "destination": "/radiografie.html",
+      "permanent": true
+    },
+    {
+      "source": "/test-radiografie",
+      "destination": "/test-radiografie.html",
+      "permanent": true
+    },
+    {
+      "source": "/politica-confidentialitate",
+      "destination": "/politica-confidentialitate.html",
+      "permanent": true
+    },
+    {
+      "source": "/termeni-conditii",
+      "destination": "/termeni-conditii.html",
+      "permanent": true
     }
   ]
 }
