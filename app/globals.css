@@ -1788,3 +1788,20 @@ footer a:hover { text-decoration: underline; }
   .mod-grid { grid-template-columns: 1fr; }
   .mod-closing { padding: 62px 0; }
 }
+
+.module-single {
+  margin-top: 44px;
+  padding-top: 26px;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-lora), serif;
+  font-size: 0.9375rem;
+  color: var(--text-light);
+  max-width: 620px;
+}
+.module-single a {
+  color: var(--gold-hover);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold-light);
+  white-space: nowrap;
+}
+.module-single a:hover { border-bottom-color: var(--gold-hover); }
