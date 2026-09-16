@@ -1805,3 +1805,11 @@ footer a:hover { text-decoration: underline; }
   white-space: nowrap;
 }
 .module-single a:hover { border-bottom-color: var(--gold-hover); }
+
+.mod-order {
+  font-family: var(--font-lora), serif;
+  font-size: 0.9375rem;
+  color: var(--text-mid);
+  max-width: 620px;
+  margin-bottom: 18px;
+}

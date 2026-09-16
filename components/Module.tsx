@@ -18,7 +18,7 @@ export default function Module() {
               delay={((i % 3) as 0 | 1 | 2)}
               className="module-card"
             >
-              <span className="module-num">Modul {m.num}</span>
+              <span className="module-num">Modulul</span>
               <h3>{m.title}</h3>
               <p>{m.desc}</p>
             </FadeIn>

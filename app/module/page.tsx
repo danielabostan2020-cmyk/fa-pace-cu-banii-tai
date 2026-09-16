@@ -86,6 +86,10 @@ export default function ModulePage() {
             <FadeIn as="h2" style={{ color: 'var(--violet-deep)', marginBottom: 14 }}>
               Alege-l pe al tău
             </FadeIn>
+            <FadeIn as="p" className="mod-order">
+              Modulele nu trebuie parcurse în ordine. Fiecare e complet în sine, așa că poți
+              începe direct cu cel care te doare acum.
+            </FadeIn>
             {nimicDisponibil && (
               <FadeIn as="p" className="mod-soon-all">
                 Modulele se deschid pe rând la vânzare individuală. Scrie-mi la{' '}
@@ -102,7 +106,7 @@ export default function ModulePage() {
                 delay={(i % 3) as 0 | 1 | 2}
                 className={`mod-card${m.stripe ? '' : ' is-soon'}`}
               >
-                <span className="mod-num">Modul {m.num}</span>
+                <span className="mod-num">Modulul</span>
                 <h3>{m.title}</h3>
                 <p>{m.desc}</p>
                 {m.stripe ? (
