@@ -30,7 +30,7 @@ export const modules: Modul[] = [
   },
   {
     num: 2,
-    title: 'Geografia Banilor',
+    title: 'Harta Banilor',
     desc: 'Cartografiem cele 5 teritorii (Venit, Economiile, Datoriile, Obiectivele și Banii Toxici) pentru a opri deciziile luate din panică.',
     stripe: '',
   },
