@@ -56,7 +56,7 @@ const raniModules = [
 const instrumente = [
   { icon: '🎬', title: 'Lecție Video Teoretică', desc: 'Înțelegi mecanismul neurobiologic al rănii specifice și cum ți-a afectat deciziile.' },
   { icon: '🎧', title: 'Protocol EFT Ghidat (Video & Audio)', desc: 'Sesiune practică de ghidaj somatic pentru eliberarea blocajului direct din corp.' },
-  { icon: '📄', title: 'Ghid PDF Descărcabil', desc: 'Fișele de „Red Flags” (diagnostic în 60 secunde) și sinteza modulului.' },
+  { icon: '📄', title: 'Ghid PDF Descărcabil', desc: 'Fișele de „Red Flags” (diagnostic în 60 de secunde) și sinteza modulului.' },
   { icon: '📓', title: 'Caiet de Journaling Somatic', desc: 'Prompturi de profunzime pentru rescrierea credințelor subconștiente.' },
 ]
 

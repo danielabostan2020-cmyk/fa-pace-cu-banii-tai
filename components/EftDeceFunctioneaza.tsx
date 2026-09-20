@@ -33,7 +33,7 @@ const motive = [
 const comparatie = [
   { before: 'Lucrează doar cu mintea conștientă (5% din creier).', after: 'Lucrează direct cu sistemul nervos și subconștientul (95%).' },
   { before: 'Îți cere să aplici „gândire pozitivă” peste o stare de panică.', after: 'Calmează mai întâi reacția fizică de alertă (amigdala).' },
-  { before: 'Îți dă concepte teoretice frumoase, dar greu de aplicat sub stres.', after: 'Îți oferă un diagnostic în 60 sec și protocoale clare de 10-15 minute.' },
+  { before: 'Îți dă concepte teoretice frumoase, dar greu de aplicat sub stres.', after: 'Îți oferă un diagnostic în 60 de secunde și protocoale clare de 10-15 minute.' },
   { before: 'Generează frustrare când revii la vechile obiceiuri financiare.', after: 'Creează noi trasee neuronale și siguranță internă pe termen lung.' },
 ]
 

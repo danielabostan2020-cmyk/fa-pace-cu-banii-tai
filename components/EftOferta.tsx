@@ -11,7 +11,7 @@ const continut = [
   '🔒 Modulul 5: Rana Obsesiei pentru Siguranță (Control compulsiv prin restricție)',
   '💸 Modulul 6: Rana Banilor Care Dispar (Instabilitate ciclică și autosabotaj)',
   '🧘‍♀️ Modulul 7: Integrare, Consolidare & Sustenabilitate',
-  '📋 Setul de Fișiere „Red Flags”: scanerul tău de diagnostic somatic în 60 sec',
+  '📋 Setul de Fișiere „Red Flags”: scanerul tău de diagnostic somatic în 60 de secunde',
   '📓 Caietele de Journaling Somatic: ghidajul de chirurgie subconștientă per modul',
   '🎁 Bonus 1: Meditație Audio de Reglare Rapidă a Sistemului Nervos',
   '🎁 Bonus 2: Acces permanent la Comunitatea Privată din Platformă',

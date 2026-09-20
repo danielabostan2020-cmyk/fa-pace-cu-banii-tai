@@ -14,7 +14,7 @@ const motive = [
   {
     num: '03',
     title: 'Se bazează pe Voință — o resursă care se consumă rapid',
-    text: 'În momentele de oboseală, presiune sau stres zilnic, voința cedează prima. Sistemul nervos revine automat la singurul mod pe care îl cunoaște pentru a te proteja: cumpărături impulsive (pentru un dop rapid de dopamină) sau izolare financiară.',
+    text: 'În momentele de oboseală, presiune sau stres zilnic, voința cedează prima. Sistemul nervos revine automat la singurul mod pe care îl cunoaște pentru a te proteja: cumpărături impulsive (pentru o doză rapidă de dopamină) sau izolare financiară.',
   },
   {
     num: '04',
