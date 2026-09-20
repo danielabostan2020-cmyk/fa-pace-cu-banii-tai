@@ -89,8 +89,9 @@ export default function PoliticaConfidentialitatePage() {
         <li>Nu vând, nu închiriez și nu fac schimb de date cu nimeni.</li>
         <li>
           Nu folosesc Google Analytics, Facebook Pixel sau alte instrumente de urmărire
-          publicitară pe acest site.
+          publicitară. Măsor doar numărul de vizite, în formă anonimă — vezi mai jos.
         </li>
+        <li>Nu te urmăresc de pe un site pe altul și nu știu ce ai făcut înainte să ajungi aici.</li>
         <li>
           Nu construiesc profiluri automate și nu iau decizii automate care să te afecteze
           juridic.
@@ -116,7 +117,7 @@ export default function PoliticaConfidentialitatePage() {
           contul de acces.
         </li>
         <li>
-          <strong>Vercel</strong> (Vercel Inc., SUA) — găzduirea acestui site. Transferul este
+          <strong>Vercel</strong> (Vercel Inc., SUA) — găzduirea acestui site și contorul anonim de vizite. Transferul este
           acoperit de clauzele contractuale standard aprobate de Comisia Europeană.
         </li>
       </ul>
@@ -127,11 +128,35 @@ export default function PoliticaConfidentialitatePage() {
 
       <h2>5. Cookie-uri și stocare locală</h2>
       <p>
-        Acest site <strong>nu folosește cookie-uri de marketing sau de analiză</strong>. Singurul
-        lucru salvat în browserul tău este preferința ta privind bannerul de cookie-uri, ținută în
-        memoria locală a browserului (<code>localStorage</code>), ca să nu te întreb de fiecare
-        dată. Poți șterge oricând această informație din setările browserului.
+        Acest site <strong>nu folosește cookie-uri de marketing</strong>. Singurul lucru salvat în
+        browserul tău este preferința ta privind bannerul de cookie-uri, ținută în memoria locală a
+        browserului (<code>localStorage</code>), ca să nu te întreb de fiecare dată. Poți șterge
+        oricând această informație din setările browserului.
       </p>
+      <h3>Măsurarea vizitelor</h3>
+      <p>
+        Folosesc <strong>Vercel Analytics</strong>, un contor de vizite care îmi arată câți oameni
+        au deschis fiecare pagină și de pe ce fel de dispozitiv. Am nevoie de el ca să înțeleg ce
+        pagini sunt utile și unde se pierd oamenii — altfel aș schimba lucruri pe ghicite.
+      </p>
+      <ul>
+        <li>
+          <strong>Nu folosește cookie-uri</strong> și nu salvează nimic în browserul tău.
+        </li>
+        <li>
+          <strong>Nu te identifică.</strong> Nu îți colectează numele, emailul sau adresa IP într-o
+          formă care să te facă recognoscibilă, și nu leagă vizitele tale între ele.
+        </li>
+        <li>
+          Văd doar cifre însumate: „pagina aceasta a fost deschisă de 140 de ori săptămâna trecută”,
+          niciodată „persoana X a citit pagina Y”.
+        </li>
+        <li>
+          <strong>Temeiul legal:</strong> interesul meu legitim de a ști dacă site-ul își face
+          treaba (art. 6 alin. 1 lit. f GDPR). Fiindcă măsurarea e anonimă și fără cookie-uri,
+          nu îți cere consimțământ.
+        </li>
+      </ul>
       <p>
         Fonturile folosite pe site sunt servite de pe propriul server, nu de la Google, deci vizita
         ta nu este semnalată către terți.

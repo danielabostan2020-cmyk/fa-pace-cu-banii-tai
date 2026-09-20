@@ -23,7 +23,7 @@ export const legal = {
   /** Regimul de TVA, afisat langa preturi. Alege una dintre cele doua variante. */
   tva: 'Toate prețurile sunt finale. Nu sunt plătitoare de TVA.',
   /** Data ultimei revizuiri, afișată în capul fiecărei pagini legale */
-  actualizat: '3 septembrie 2026',
+  actualizat: '20 septembrie 2026',
 } as const
 
 /** true dacă a rămas măcar un câmp necompletat */
