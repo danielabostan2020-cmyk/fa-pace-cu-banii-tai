@@ -22,7 +22,7 @@ const description =
   'Eliberează blocajele subconștiente, vindecă rănile financiare profunde și redobândește-ți siguranța interioară de a atrage și păstra banii — prin metoda eliberării somatice EFT Prosper.'
 
 const url = '/eft-prosper.html'
-const ogImage = '/og-eft-prosper.png'
+const ogImage = '/og-eft-prosper-v2.png'
 
 export const metadata: Metadata = {
   title,

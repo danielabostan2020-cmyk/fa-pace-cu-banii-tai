@@ -44,6 +44,16 @@ const CARDS = {
     portraitPosition: 'center 18%',
   },
 
+  prosper: {
+    out: 'og-eft-prosper-v2.png',
+    layout: 'centered',
+    label: 'EFT Prosper',
+    title: 'Kitul Rănilor<br>Financiare',
+    subtitle: 'Vindecă relația cu banii, începând de la rădăcină',
+    portrait: 'daniela-eft-prosper.webp',
+    portraitPosition: 'center 14%',
+  },
+
   test: {
     out: 'og-test-rani-financiare-v2.png',
     layout: 'centered',
