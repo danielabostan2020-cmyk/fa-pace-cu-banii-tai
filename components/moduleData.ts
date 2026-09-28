@@ -26,19 +26,19 @@ export const modules: Modul[] = [
     num: 1,
     title: 'Codul Meritului',
     desc: 'Eliminăm rușinea și vinovăția transmise din generație în generație. Recuperezi permisiunea profundă de a cere și de a primi.',
-    stripe: '',
+    stripe: 'https://buy.stripe.com/7sYdRa1oG7Vs8RB8lG6Vq09',
   },
   {
     num: 2,
     title: 'Harta Banilor',
     desc: 'Cartografiem cele 5 teritorii (Venit, Economiile, Datoriile, Obiectivele și Banii Toxici) pentru a opri deciziile luate din panică.',
-    stripe: '',
+    stripe: 'https://buy.stripe.com/14A9AUaZg1x49VF9pK6Vq0a',
   },
   {
     num: 3,
     title: 'Anatomia Supraviețuirii',
     desc: 'Resetăm trauma financiară. Treci de la paralizia decizională la calm și stabilitate în relația cu banii.',
-    stripe: '',
+    stripe: 'https://buy.stripe.com/4gM9AU2sKejQ6Jt59u6Vq0b',
   },
   {
     num: 4,
