@@ -78,7 +78,7 @@ export const modules: Modul[] = [
     title: 'Metabolismul Eșecului',
     desc: 'Metabolizezi emoțional pierderile, falimentele sau investițiile proaste din trecut, recăpătând încrederea în deciziile tale din prezent.',
     stripe: 'https://buy.stripe.com/14AcN61oGdfM9VFbxS6Vq0e',
-    curs: 'metabolismul-esecului-si-a-pierderilor',
+    curs: 'metabolismul-esecului-si-al-pierderilor',
   },
   {
     num: 9,
