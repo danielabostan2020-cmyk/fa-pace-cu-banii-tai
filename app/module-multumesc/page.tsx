@@ -2,9 +2,10 @@ import type { Metadata } from 'next'
 import Footer from '@/components/Footer'
 import FadeIn from '@/components/FadeIn'
 import { legal } from '@/components/legalConfig'
+import { moduleCuAcces, linkCurs } from '@/components/moduleData'
 
-const title = 'Modulul tău e pe drum'
-const description = 'Plata a fost confirmată. Iată ce urmează.'
+const title = 'Modulul tău te așteaptă'
+const description = 'Plata a fost confirmată. Intră în modul de aici.'
 
 export const metadata: Metadata = {
   title,
@@ -12,24 +13,6 @@ export const metadata: Metadata = {
   // Se vede doar după plată — nu are ce căuta în rezultatele căutărilor.
   robots: { index: false, follow: false },
 }
-
-const pasi = [
-  {
-    n: '1',
-    titlu: 'Verifică-ți emailul',
-    text: 'Ți-am trimis pe adresa cu care ai plătit datele de acces la modul. De obicei ajunge în câteva minute.',
-  },
-  {
-    n: '2',
-    titlu: 'Dacă nu îl găsești, uită-te în Spam',
-    text: 'Emailurile cu date de acces ajung uneori în Spam sau în fila Promoții. Marchează-l ca „Nu este spam”, ca să primești și restul materialelor.',
-  },
-  {
-    n: '3',
-    titlu: 'Rezervă-ți timpul înainte să începi',
-    text: 'Modulul e al tău pe viață, deci nu te grăbește nimeni. Dar alege-ți dinainte două ore liniștite — lucrul ăsta cere prezență, nu viteză.',
-  },
-]
 
 export default function ModuleMultumescPage() {
   return (
@@ -69,27 +52,45 @@ export default function ModuleMultumescPage() {
 
       <section className="ty-body">
         <div className="container">
-          <FadeIn as="h2" style={{ color: 'var(--violet-deep)', marginBottom: 36 }}>
-            Ce urmează
+          <FadeIn as="h2" style={{ color: 'var(--violet-deep)', marginBottom: 14 }}>
+            Intră în modulul tău
+          </FadeIn>
+          <FadeIn as="p" className="ty-intro">
+            Alege din lista de mai jos modulul pe care tocmai l-ai cumpărat.
           </FadeIn>
 
-          <div className="ty-steps">
-            {pasi.map((p, i) => (
-              <FadeIn key={p.n} delay={(i % 2) as 0 | 1} className="ty-step">
-                <span className="ty-step-n">{p.n}</span>
-                <div>
-                  <h3>{p.titlu}</h3>
-                  <p>{p.text}</p>
-                </div>
+          <div className="ty-courses">
+            {moduleCuAcces.map((m, i) => (
+              <FadeIn key={m.num} delay={(i % 2) as 0 | 1}>
+                <a className="ty-course" href={linkCurs(m)} target="_blank" rel="noopener">
+                  <span className="ty-course-name">{m.title}</span>
+                  <span className="ty-course-go" aria-hidden="true">
+                    Intră →
+                  </span>
+                </a>
               </FadeIn>
             ))}
           </div>
 
           <FadeIn className="ty-note">
             <p>
-              <strong>Nu a ajuns niciun email după 24 de ore?</strong> Scrie-mi la{' '}
-              <a href={`mailto:${legal.email}`}>{legal.email}</a> și îți deschid accesul manual. Nu
-              rămâi blocată.
+              <strong>La prima intrare îți faci un cont, și contează cum.</strong> Platforma îți
+              cere o adresă de email și o parolă. Folosește <strong>exact adresa cu care ai
+              plătit</strong> — după ea te recunoaște și îți deschide modulul. Cu altă adresă nu
+              are de unde să știe că ai cumpărat.
+            </p>
+          </FadeIn>
+
+          <FadeIn as="p" className="ty-intro" style={{ marginBottom: 32 }}>
+            Nu te grăbi să începi azi. Modulul e al tău pe viață, dar alege-ți dinainte două ore
+            liniștite — lucrul ăsta cere prezență, nu viteză.
+          </FadeIn>
+
+          <FadeIn className="ty-note">
+            <p>
+              <strong>Ceva nu merge?</strong> Scrie-mi la{' '}
+              <a href={`mailto:${legal.email}`}>{legal.email}</a> și îți deschid accesul manual, în
+              aceeași zi. Nu rămâi blocată.
             </p>
           </FadeIn>
 

@@ -1538,10 +1538,50 @@ footer a:hover { text-decoration: underline; }
   margin: 0 auto;
 }
 
+.ty-intro {
+  font-family: var(--font-lora), serif;
+  font-size: 0.9375rem;
+  color: var(--text-mid);
+  max-width: 62ch;
+  margin: 0 0 26px;
+}
+
+.ty-courses { display: grid; gap: 12px; margin-bottom: 36px; }
+.ty-course {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-card);
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.ty-course:hover,
+.ty-course:focus-visible { border-color: var(--gold); transform: translateY(-1px); }
+.ty-course-name {
+  font-family: var(--font-cormorant), serif;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  color: var(--violet-deep);
+}
+.ty-course-go {
+  flex: none;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--gold-hover);
+}
+
 @media (max-width: 768px) {
   .ty-hero { padding: 76px 0 64px; }
   .ty-body { padding: 60px 0 76px; }
   .ty-step { padding: 22px 20px; gap: 16px; }
+  .ty-course { padding: 18px 20px; gap: 12px; }
+  .ty-course-name { font-size: 1.125rem; }
 }
 
 .footer-nav { margin-top: 14px; }
