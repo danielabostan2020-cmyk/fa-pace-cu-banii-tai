@@ -44,13 +44,13 @@ export const modules: Modul[] = [
     num: 4,
     title: 'Arheologia Loialității',
     desc: 'Te desprinzi de scenariul de greutate al familiei tale, fără să simți că îi trădezi. Câștigi libertatea de a depăși nivelul lor financiar.',
-    stripe: '',
+    stripe: 'https://buy.stripe.com/bJe6oI7N4grY3xh45q6Vq0c',
   },
   {
     num: 5,
     title: 'Mecanica Stagnării',
     desc: 'Dizolvăm avantajele secundare ale subconștientului care te țin la aceleași venituri de ani de zile, dintr-o nevoie falsă de protecție.',
-    stripe: '',
+    stripe: 'https://buy.stripe.com/9B6dRa0kCb7E4Bl59u6Vq0d',
   },
   {
     num: 6,
@@ -68,7 +68,7 @@ export const modules: Modul[] = [
     num: 8,
     title: 'Metabolismul Eșecului',
     desc: 'Metabolizezi emoțional pierderile, falimentele sau investițiile proaste din trecut, recăpătând încrederea în deciziile tale din prezent.',
-    stripe: '',
+    stripe: 'https://buy.stripe.com/14AcN61oGdfM9VFbxS6Vq0e',
   },
   {
     num: 9,
