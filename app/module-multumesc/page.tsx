@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Footer from '@/components/Footer'
 import FadeIn from '@/components/FadeIn'
 import { legal } from '@/components/legalConfig'
-import { moduleCuAcces, linkCurs } from '@/components/moduleData'
+import ModuleAcces from '@/components/ModuleAcces'
 
 const title = 'Modulul tău te așteaptă'
 const description = 'Plata a fost confirmată. Intră în modul de aici.'
@@ -55,22 +55,7 @@ export default function ModuleMultumescPage() {
           <FadeIn as="h2" style={{ color: 'var(--violet-deep)', marginBottom: 14 }}>
             Intră în modulul tău
           </FadeIn>
-          <FadeIn as="p" className="ty-intro">
-            Alege din lista de mai jos modulul pe care tocmai l-ai cumpărat.
-          </FadeIn>
-
-          <div className="ty-courses">
-            {moduleCuAcces.map((m, i) => (
-              <FadeIn key={m.num} delay={(i % 2) as 0 | 1}>
-                <a className="ty-course" href={linkCurs(m)} target="_blank" rel="noopener">
-                  <span className="ty-course-name">{m.title}</span>
-                  <span className="ty-course-go" aria-hidden="true">
-                    Intră →
-                  </span>
-                </a>
-              </FadeIn>
-            ))}
-          </div>
+          <ModuleAcces />
 
           <FadeIn className="ty-note">
             <p>

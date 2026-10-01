@@ -13,6 +13,8 @@
 export type Modul = {
   num: number
   title: string
+  /** Eticheta scurtă din adresa paginii de mulțumire (`?m=`). Nu se schimbă. */
+  slug: string
   desc: string
   /** Linkul de plată din Stripe. Gol = modulul nu e încă de vânzare. */
   stripe: string
@@ -27,6 +29,7 @@ export const modules: Modul[] = [
   {
     num: 1,
     title: 'Codul Meritului',
+    slug: 'codul-meritului',
     desc: 'Eliminăm rușinea și vinovăția transmise din generație în generație. Recuperezi permisiunea profundă de a cere și de a primi.',
     stripe: 'https://buy.stripe.com/7sYdRa1oG7Vs8RB8lG6Vq09',
     curs: 'codul-meritului-fata-in-fata-cu-vina-rusinea-si-banii',
@@ -34,6 +37,7 @@ export const modules: Modul[] = [
   {
     num: 2,
     title: 'Harta Banilor',
+    slug: 'harta-banilor',
     desc: 'Cartografiem cele 5 teritorii (Venit, Economiile, Datoriile, Obiectivele și Banii Toxici) pentru a opri deciziile luate din panică.',
     stripe: 'https://buy.stripe.com/14A9AUaZg1x49VF9pK6Vq0a',
     curs: 'harta-banilor',
@@ -41,6 +45,7 @@ export const modules: Modul[] = [
   {
     num: 3,
     title: 'Anatomia Supraviețuirii',
+    slug: 'anatomia-supravietuirii',
     desc: 'Resetăm trauma financiară. Treci de la paralizia decizională la calm și stabilitate în relația cu banii.',
     stripe: 'https://buy.stripe.com/4gM9AU2sKejQ6Jt59u6Vq0b',
     curs: 'anatomia-supravietuirii-protocol-de-vindecare-a-traumei-financiare',
@@ -48,6 +53,7 @@ export const modules: Modul[] = [
   {
     num: 4,
     title: 'Arheologia Loialității',
+    slug: 'arheologia-loialitatii',
     desc: 'Te desprinzi de scenariul de greutate al familiei tale, fără să simți că îi trădezi. Câștigi libertatea de a depăși nivelul lor financiar.',
     stripe: 'https://buy.stripe.com/bJe6oI7N4grY3xh45q6Vq0c',
     curs: 'arheologia-loialitatii-returnarea-poverilor-familiale',
@@ -55,6 +61,7 @@ export const modules: Modul[] = [
   {
     num: 5,
     title: 'Mecanica Stagnării',
+    slug: 'mecanica-stagnarii',
     desc: 'Dizolvăm avantajele secundare ale subconștientului care te țin la aceleași venituri de ani de zile, dintr-o nevoie falsă de protecție.',
     stripe: 'https://buy.stripe.com/9B6dRa0kCb7E4Bl59u6Vq0d',
     curs: 'mecanica-stagnarii-deconstructia-avantajelor-secundare',
@@ -62,6 +69,7 @@ export const modules: Modul[] = [
   {
     num: 6,
     title: 'Topografia Datoriei',
+    slug: 'topografia-datoriei',
     desc: 'Decuplăm valoarea ta personală de soldul contului tău. Rupe ciclul în care datoria revine, indiferent cât plătești.',
     stripe: '',
     curs: '',
@@ -69,6 +77,7 @@ export const modules: Modul[] = [
   {
     num: 7,
     title: 'Fiziologia Expansiunii',
+    slug: 'fiziologia-expansiunii',
     desc: 'Înveți să îți setezi obiective financiare mari fără să activezi alarma în corp.',
     stripe: '',
     curs: '',
@@ -76,6 +85,7 @@ export const modules: Modul[] = [
   {
     num: 8,
     title: 'Metabolismul Eșecului',
+    slug: 'metabolismul-esecului',
     desc: 'Metabolizezi emoțional pierderile, falimentele sau investițiile proaste din trecut, recăpătând încrederea în deciziile tale din prezent.',
     stripe: 'https://buy.stripe.com/14AcN61oGdfM9VFbxS6Vq0e',
     curs: 'metabolismul-esecului-si-al-pierderilor',
@@ -83,6 +93,7 @@ export const modules: Modul[] = [
   {
     num: 9,
     title: 'Alchimia Meritului',
+    slug: 'alchimia-meritului',
     desc: 'Dizolvăm pragul inferior care te face să te mulțumești cu puțin sau să te vinzi ieftin în fața clienților.',
     stripe: '',
     curs: '',
@@ -90,6 +101,7 @@ export const modules: Modul[] = [
   {
     num: 10,
     title: 'Ecologia Profitului',
+    slug: 'ecologia-profitului',
     desc: 'Deconstruim mitul „muncă grea = bani mulți". Înveți cum profitul se poate măsura în valoare livrată cu tihnă, nu în ore de stres.',
     stripe: '',
     curs: '',
@@ -97,6 +109,7 @@ export const modules: Modul[] = [
   {
     num: 11,
     title: 'Arta de a Primi',
+    slug: 'arta-de-a-primi',
     desc: 'Corectăm incapacitatea de a reține banii. Înveți să lași surplusul din cont să rămână și să crească, fără să cheltuiești compulsiv.',
     stripe: '',
     curs: '',
@@ -104,6 +117,7 @@ export const modules: Modul[] = [
   {
     num: 12,
     title: 'Arhitectura Noii Identități',
+    slug: 'arhitectura-noii-identitati',
     desc: 'Stabilizăm succesul obținut. Starea de prosperitate și siguranță emoțională devine noua ta normalitate.',
     stripe: '',
     curs: '',
