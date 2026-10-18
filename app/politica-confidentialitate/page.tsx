@@ -59,7 +59,24 @@ export default function PoliticaConfidentialitatePage() {
         <strong>nu ajung la mine</strong>. Nu știu ce ai bifat la fiecare întrebare.
       </p>
 
-      <h3>b) Când cumperi un program</h3>
+      <h3>b) Când te înscrii pe lista de acces prioritar pentru sesiunile 1 la 1</h3>
+      <p>
+        Îți cer <strong>prenumele și adresa de email</strong>, împreună cu bifa ta explicită de
+        acord. Le folosesc ca să îți trimit câteva emailuri despre relația cu banii și despre
+        lucrul 1 la 1 și ca să te anunț prima când deschid locuri noi pentru Sesiunea de Diagnoză.
+      </p>
+      <ul>
+        <li>
+          <strong>Temeiul legal:</strong> consimțământul tău (art. 6 alin. 1 lit. a GDPR), dat
+          prin bifarea căsuței. Îl poți retrage oricând, din linkul de dezabonare din fiecare
+          email.
+        </li>
+        <li>
+          <strong>Cât păstrez datele:</strong> până când te dezabonezi sau ceri ștergerea.
+        </li>
+      </ul>
+
+      <h3>c) Când cumperi un program</h3>
       <p>
         Plata se face prin <strong>Stripe</strong>. Datele cardului tău sunt introduse pe pagina
         securizată Stripe și <strong>nu trec niciodată prin acest site</strong> — nu le văd, nu le
@@ -77,7 +94,7 @@ export default function PoliticaConfidentialitatePage() {
         </li>
       </ul>
 
-      <h3>c) Când îmi scrii pe email</h3>
+      <h3>d) Când îmi scrii pe email</h3>
       <p>
         Păstrez corespondența cât timp e nevoie ca să îți răspund și să pot dovedi ce am discutat
         — de regulă maximum 3 ani. Temeiul legal este interesul meu legitim de a ține evidența
@@ -107,7 +124,7 @@ export default function PoliticaConfidentialitatePage() {
       <ul>
         <li>
           <strong>Newsman</strong> (România) — platforma de email prin care îți trimit rezultatele
-          testului și newsletterul.
+          testului, emailurile listei de acces prioritar și newsletterul.
         </li>
         <li>
           <strong>Stripe</strong> (Stripe Payments Europe Ltd., Irlanda) — procesarea plăților.
