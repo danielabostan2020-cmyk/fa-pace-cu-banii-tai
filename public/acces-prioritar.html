@@ -119,7 +119,9 @@
       const script = document.createElement('script');
       const cleanup = function () { delete window[cb]; script.remove(); };
       window[cb] = function (data) { cleanup(); (data && data.err === false) ? resolve(data) : reject(data); };
-      const params = new URLSearchParams({ email: email, fname: name, agree_tc: '1', source: 'acces-prioritar', callback: cb });
+      // Formularul listei 17758 cere acordul sub numele „acord_tc” (testul folosește „agree_tc”).
+      // Prenumele îl trimitem sub ambele nume uzuale, ca să ajungă în ##firstname##.
+      const params = new URLSearchParams({ email: email, fname: name, firstname: name, acord_tc: '1', source: 'acces-prioritar', callback: cb });
       script.src = NEWSMAN_JSONP_URL + '?' + params.toString();
       script.onerror = function () { cleanup(); reject(new Error('Newsman JSONP request failed to load')); };
       document.body.appendChild(script);
