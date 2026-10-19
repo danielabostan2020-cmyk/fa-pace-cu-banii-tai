@@ -59,7 +59,7 @@ export default function PoliticaConfidentialitatePage() {
         <strong>nu ajung la mine</strong>. Nu știu ce ai bifat la fiecare întrebare.
       </p>
 
-      <h3>b) Când te înscrii pe lista de acces prioritar pentru sesiunile 1 la 1</h3>
+      <h3>b) Când te înscrii pe lista de așteptare pentru sesiunile 1 la 1</h3>
       <p>
         Îți cer <strong>prenumele și adresa de email</strong>, împreună cu bifa ta explicită de
         acord. Le folosesc ca să îți trimit câteva emailuri despre relația cu banii și despre
@@ -124,7 +124,7 @@ export default function PoliticaConfidentialitatePage() {
       <ul>
         <li>
           <strong>Newsman</strong> (România) — platforma de email prin care îți trimit rezultatele
-          testului, emailurile listei de acces prioritar și newsletterul.
+          testului, emailurile listei de așteptare și newsletterul.
         </li>
         <li>
           <strong>Stripe</strong> (Stripe Payments Europe Ltd., Irlanda) — procesarea plăților.
