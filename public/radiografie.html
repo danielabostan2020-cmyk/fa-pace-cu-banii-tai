@@ -744,7 +744,7 @@
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 
-  const NEWSMAN_JSONP_URL = 'https://nl.danielabostan.ro/subscribejsonp/16541/6a39736d1fbbbf5a06a2fa9c/d261d86f731de370846856cc88cd6fbd';
+  const NEWSMAN_JSONP_URL = 'https://nl.danielabostan.ro/subscribejsonp/17763/6ad618971fbbbfce31ab4862/f99d702a3262e2b9dbe1e89a873803e8';
 
   function subscribeToNewsman(email, name) {
     return new Promise((resolve, reject) => {
@@ -771,7 +771,7 @@
         // și „lastname” nevid (testat pe 19 oct). Un spațiu e suficient.
         firstname: name,
         lastname: ' ',
-        agree_tc: '1',
+        acord_tc: '1',
         source: 'radiografie',
         callback: callbackName
       });
