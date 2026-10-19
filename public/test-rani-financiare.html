@@ -1734,7 +1734,10 @@ function(t){t.__bidiEngine__=t.prototype.__bidiEngine__=function(t){var r,n,i,a,
 
       const params = new URLSearchParams({
         email: email,
-        fname: name,
+        // Endpointul JSONP salvează prenumele doar sub „firstname” și doar dacă primește
+        // și „lastname” nevid (testat pe 19 oct). Un spațiu e suficient.
+        firstname: name,
+        lastname: ' ',
         agree_tc: '1',
         source: 'test-rani-financiare',
         callback: callbackName
