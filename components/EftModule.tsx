@@ -61,7 +61,7 @@ const instrumente = [
 ]
 
 const bonusuri = [
-  { icon: '🎁', title: 'Bonus 1: Meditație Audio de Reglare Rapidă a Sistemului Nervos', desc: 'Un protocol audio de urgență pe care îl poți asculta oricând simți stări acute de anxietate, panică sau presiune financiară.' },
+  { icon: '🎁', title: 'Bonus 1: Meditație de Vindecare a Rănilor Financiare', desc: 'O meditație ghidată de 25 de minute care integrează tot ce ai lucrat în kit și îi transmite sistemului tău nervos că este în siguranță să primești, să păstrezi și să crești.' },
   { icon: '🎁', title: 'Bonus 2: Acces Dedicat în Comunitatea Privată din Platformă', desc: 'Un spațiu securizat și susținător în care poți pune întrebări, împărtăși conștientizările și primi ghidaj pe parcursul procesului tău.' },
 ]
 

@@ -13,7 +13,7 @@ const continut = [
   '🧘‍♀️ Modulul 7: Integrare, Consolidare & Sustenabilitate',
   '📋 Setul de Fișiere „Red Flags”: scanerul tău de diagnostic somatic în 60 de secunde',
   '📓 Caietele de Journaling Somatic: ghidajul de chirurgie subconștientă per modul',
-  '🎁 Bonus 1: Meditație Audio de Reglare Rapidă a Sistemului Nervos',
+  '🎁 Bonus 1: Meditație de Vindecare a Rănilor Financiare',
   '🎁 Bonus 2: Acces permanent la Comunitatea Privată din Platformă',
 ]
 
