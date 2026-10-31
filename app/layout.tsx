@@ -1,30 +1,8 @@
 import type { Metadata } from 'next'
-import { Cormorant_Garamond, Lora, Poppins } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
+// Fonturile sunt găzduite local (public/fonts), ca build-ul pe Vercel să nu depindă de Google Fonts
+import './fonts.css'
 import './globals.css'
-
-const cormorant = Cormorant_Garamond({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  style: ['normal', 'italic'],
-  display: 'swap',
-  variable: '--font-cormorant',
-})
-
-const lora = Lora({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  style: ['normal', 'italic'],
-  display: 'swap',
-  variable: '--font-lora',
-})
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
-  display: 'swap',
-  variable: '--font-poppins',
-})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.danielabostan.ro'),
@@ -35,10 +13,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="ro"
-      className={`${cormorant.variable} ${lora.variable} ${poppins.variable}`}
-    >
+    <html lang="ro">
       <body>
         {children}
         {/* Numără vizitele pe toate paginile. Fără cookie-uri și fără date
