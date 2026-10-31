@@ -67,6 +67,21 @@
       "source": "/module",
       "destination": "/module.html",
       "permanent": true
+    },
+    {
+      "source": "/lista-de-interes",
+      "destination": "/lista-de-interes.html",
+      "permanent": true
+    },
+    {
+      "source": "/lista-de-asteptare.html",
+      "destination": "/lista-de-interes.html",
+      "permanent": true
+    },
+    {
+      "source": "/lista-de-asteptare",
+      "destination": "/lista-de-interes.html",
+      "permanent": true
     }
   ]
 }
