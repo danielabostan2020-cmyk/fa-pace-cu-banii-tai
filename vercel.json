@@ -74,6 +74,11 @@
       "permanent": true
     },
     {
+      "source": "/lista-de-interes.html.",
+      "destination": "/lista-de-interes.html",
+      "permanent": true
+    },
+    {
       "source": "/lista-de-asteptare.html",
       "destination": "/lista-de-interes.html",
       "permanent": true
