@@ -94,7 +94,32 @@ export default function PoliticaConfidentialitatePage() {
         </li>
       </ul>
 
-      <h3>d) Când îmi scrii pe email</h3>
+      <h3>d) Când completezi Chestionarul de Diagnoză Emoțional-Financiară</h3>
+      <p>
+        Chestionarul îl primești după ce alegi pachetul de sesiuni 1 la 1. Îți cer{' '}
+        <strong>numele, telefonul și adresa de email</strong>, plus răspunsuri despre relația ta cu
+        banii, situația ta financiară și experiențele tale de viață. Te întreb și{' '}
+        <strong>dacă ești în terapie sau sub tratament psihiatric</strong>. Nu îți cer
+        diagnosticul sau alte detalii medicale. Răspunsul îl folosesc doar ca să știu dacă lucrul
+        împreună ți se potrivește și ca să pregătesc sesiunile noastre.
+      </p>
+      <ul>
+        <li>
+          <strong>Temeiul legal:</strong> consimțământul tău explicit (art. 6 alin. 1 lit. a și
+          art. 9 alin. 2 lit. a GDPR), dat prin bifarea căsuței de la finalul chestionarului. Îl
+          poți retrage oricând, scriindu-mi.
+        </li>
+        <li>
+          <strong>Cine vede răspunsurile:</strong> doar eu. Chestionarul este un formular Google,
+          iar răspunsurile sunt stocate în contul meu Google.
+        </li>
+        <li>
+          <strong>Cât păstrez datele:</strong> cât timp lucrăm împreună și cel mult 3 ani după
+          ultima sesiune, apoi le șterg. Le șterg mai devreme dacă îmi ceri.
+        </li>
+      </ul>
+
+      <h3>e) Când îmi scrii pe email</h3>
       <p>
         Păstrez corespondența cât timp e nevoie ca să îți răspund și să pot dovedi ce am discutat
         — de regulă maximum 3 ani. Temeiul legal este interesul meu legitim de a ține evidența
@@ -113,7 +138,10 @@ export default function PoliticaConfidentialitatePage() {
           Nu construiesc profiluri automate și nu iau decizii automate care să te afecteze
           juridic.
         </li>
-        <li>Nu cer și nu prelucrez intenționat date privind sănătatea ta.</li>
+        <li>
+          Nu cer date despre sănătatea ta. Singura excepție este întrebarea din Chestionarul de
+          Diagnoză despre terapie sau tratament psihiatric, pentru care îți cer acordul explicit.
+        </li>
       </ul>
 
       <h2>4. Cui ajung datele tale</h2>
@@ -132,6 +160,10 @@ export default function PoliticaConfidentialitatePage() {
         <li>
           <strong>DoCourse</strong> — platforma pe care se livrează cursurile și unde îți creezi
           contul de acces.
+        </li>
+        <li>
+          <strong>Google</strong> (Google Ireland Ltd.) — Google Forms, prin care completezi
+          Chestionarul de Diagnoză, și contul în care sunt stocate răspunsurile.
         </li>
         <li>
           <strong>Vercel</strong> (Vercel Inc., SUA) — găzduirea acestui site și contorul anonim de vizite. Transferul este
