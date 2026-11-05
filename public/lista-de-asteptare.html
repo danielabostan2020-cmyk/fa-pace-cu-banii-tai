@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lista de interes · Reprogramarea Emoțională a Relației cu Banii · Daniela Bostan</title>
-<meta name="description" content="Lista de interes pentru Reprogramarea Emoțională a Relației cu Banii, procesul individual cu Daniela Bostan. Înscrierea și Sesiunea de Explorare sunt gratuite.">
-<link rel="canonical" href="https://www.danielabostan.ro/lista-de-interes.html">
-<meta property="og:title" content="Lista de interes · Reprogramarea Emoțională a Relației cu Banii">
+<title>Lista de așteptare · Reprogramarea Emoțională a Relației cu Banii · Daniela Bostan</title>
+<meta name="description" content="Lista de așteptare pentru Reprogramarea Emoțională a Relației cu Banii, procesul individual cu Daniela Bostan. Înscrierea și Sesiunea de Explorare sunt gratuite.">
+<link rel="canonical" href="https://www.danielabostan.ro/lista-de-asteptare.html">
+<meta property="og:title" content="Lista de așteptare · Reprogramarea Emoțională a Relației cu Banii">
 <meta property="og:description" content="Cum să faci, să primești și să păstrezi banii dintr-o stare de siguranță, fără anxietatea de fundal care te însoțește mereu.">
-<meta property="og:url" content="https://www.danielabostan.ro/lista-de-interes.html">
+<meta property="og:url" content="https://www.danielabostan.ro/lista-de-asteptare.html">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <!--
-  Lista de interes pentru sesiunile 1 la 1 (Program CCC, S5 Marți + S6 Marți, variantele [1 la 1]).
+  Lista de așteptare (fostă „lista de interes”, redenumită 2026-11-05) pentru sesiunile 1 la 1 (Program CCC, S5 Marți + S6 Marți, variantele [1 la 1]).
   Textele sunt ale Danielei. Paleta e cea din 2026-10-07, în varianta „fildeș și ciocolată” aleasă pe 2026-10-31:
   fără auriu (Daniela nu îl vrea pe suprafețe mari), buton Dark Brown cu text Ivory Cream.
   Formularul trimite în Newsman prin JSONP, la fel ca testul, dar într-o LISTĂ SEPARATĂ:
@@ -66,9 +66,9 @@
 
 <main class="page">
 
-  <!-- S5 Marți [1 la 1]: pagina de listă de interes -->
+  <!-- S5 Marți [1 la 1]: pagina de listă de așteptare -->
   <div id="opt-in">
-    <div class="eyebrow">Reprogramarea Emoțională a Relației cu Banii · Listă de interes</div>
+    <div class="eyebrow">Reprogramarea Emoțională a Relației cu Banii · Listă de așteptare</div>
     <h1>Cum să faci, să primești și să păstrezi banii <em>dintr-o stare de siguranță</em>, fără anxietatea de fundal care te însoțește mereu.</h1>
     <p class="sub">Pentru femeile competente și responsabile care au toate atuurile pentru a reuși, dar simt că bat pasul pe loc, iar relația lor cu banii nu reflectă nici efortul depus, nici valoarea reală pe care o aduc.</p>
 
@@ -76,7 +76,7 @@
       <p><strong>Vrei să afli ce ar putea deveni posibil pentru tine dacă ai înțelege mai bine ce te oprește?</strong></p>
       <p>Te invit să descoperi „Reprogramarea Emoțională a Relației cu Banii”.</p>
       <p>Pentru că este un proces personalizat, care necesită un spațiu de lucru concentrat, lucrez cu un număr restrâns de cliente.</p>
-      <p>Lasă adresa de email și înscrie-te pe lista de interes.</p>
+      <p>Lasă adresa de email și înscrie-te pe lista de așteptare.</p>
     </div>
 
     <form id="interest-form" novalidate>
@@ -88,7 +88,7 @@
         <input type="checkbox" id="gdpr" required>
         <span>Sunt de acord să primesc emailuri de la Daniela Bostan despre „Reprogramarea Emoțională a Relației cu Banii”, Sesiunea de Explorare și relația cu banii. Mă pot dezabona oricând. Detalii în <a href="/politica-confidentialitate.html" target="_blank" rel="noopener">politica de confidențialitate</a>.</span>
       </label>
-      <button type="submit" id="submit-btn">Vreau pe lista de interes</button>
+      <button type="submit" id="submit-btn">Vreau pe lista de așteptare</button>
       <p class="status" id="status" role="alert"></p>
     </form>
     <p class="fine">Înscrierea pe listă și participarea la Sesiunea de Explorare sunt gratuite, fără obligația de a continua.</p>
@@ -150,7 +150,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }).catch(function (data) {
       console.error('Abonarea Newsman a eșuat:', data);
-      btn.disabled = false; btn.textContent = 'Vreau pe lista de interes';
+      btn.disabled = false; btn.textContent = 'Vreau pe lista de așteptare';
       status.textContent = (data && data.response && data.response.errors && data.response.errors[0])
         || 'Nu am putut înregistra abonarea. Te rog încearcă din nou.';
     });
