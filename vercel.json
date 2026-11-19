@@ -69,6 +69,11 @@
       "permanent": true
     },
     {
+      "source": "/reprogramarea-emotionala",
+      "destination": "/reprogramarea-emotionala.html",
+      "permanent": true
+    },
+    {
       "source": "/lista-de-asteptare",
       "destination": "/lista-de-asteptare.html",
       "permanent": true
