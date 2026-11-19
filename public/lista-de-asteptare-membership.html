@@ -20,60 +20,96 @@
   La fiecare deschidere se schimbă doar URMATOAREA_DESCHIDERE, mai jos în script.
 -->
 <style>
+  /* Brandul nou (19.11.2026): fildeș–șampanie, auriu doar pe litere și linii, Cormorant + Poppins.
+     Accentul paginii: ESPRESSO (membership). Formularul și scriptul de mai jos sunt neschimbate. */
   :root{
-    --ivory:#FAF6EE; --beige:#EADCCD; --sand:#D8BFA7; --taupe:#B89B80;
-    --brown:#8A6A4F; --gold:#D4A45A; --ink:#3E3226; --slate:#566375; --card:#FFFDF8;
+    --fildes:#FAF6EE; --sampanie:#EFE3CF; --ciocolata:#3E3226; --text:#3E3226; --text-moale:#4A3B2E;
+    --bronz:#6E4A26; --linie:rgba(62,50,38,.16);
+    --auriu-satin:linear-gradient(115deg,#6B4C2A 0%,#9C7442 30%,#C9A46A 50%,#94703F 70%,#6B4C2A 100%);
+    --accent-1:#5A3B30; --accent-2:#432C25; --accent-hover:#6E4A3C;
   }
-  *{ box-sizing:border-box; }
-  body{ margin:0; font-family:'Poppins',system-ui,sans-serif; background:var(--ivory); color:var(--ink);
-        padding:48px max(16px, env(safe-area-inset-right,0px)) 48px max(16px, env(safe-area-inset-left,0px)); }
-  .page{ max-width:620px; margin:0 auto; background:var(--card); border:1px solid var(--beige);
-         border-radius:18px; padding:48px 40px; box-shadow:0 24px 60px -30px rgba(62,50,38,.35); }
-  .eyebrow{ font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:18px; }
-  h1{ font-family:'Cormorant Garamond',Georgia,serif; font-weight:600; font-size:clamp(28px,5vw,36px); line-height:1.2;
-      color:var(--ink); margin:0 0 18px; text-wrap:balance; }
-  h1 em{ font-style:italic; color:var(--brown); }
-  p.sub{ font-size:16px; line-height:1.7; color:var(--slate); margin:0 0 26px; }
-  .offer{ background:var(--ivory); border-left:3px solid var(--gold); border-radius:10px; padding:20px 22px;
-          font-size:15px; line-height:1.7; margin:0 0 28px; }
-  .offer p{ margin:0 0 10px; } .offer p:last-child{ margin:0; }
-  .offer ul{ margin:0 0 12px; padding-left:20px; }
-  .offer li{ margin:0 0 4px; }
-  .next{ font-size:15px; line-height:1.6; margin:0 0 22px; }
-  .next strong{ color:var(--brown); }
-  form{ display:grid; gap:10px; margin-bottom:12px; }
-  .row{ display:flex; gap:10px; flex-wrap:wrap; }
-  input[type=text], input[type=email]{ flex:1; min-width:180px; padding:14px 18px; font:15px 'Poppins',sans-serif;
-      border:1.5px solid var(--beige); border-radius:10px; background:var(--ivory); color:var(--ink); }
-  input:focus{ outline:none; border-color:var(--gold); }
-  .gdpr{ display:flex; gap:10px; align-items:flex-start; font-size:13px; line-height:1.5; color:var(--slate); }
-  .gdpr input{ margin-top:3px; accent-color:var(--brown); }
-  .gdpr a{ color:var(--brown); }
-  button{ padding:15px 26px; font:600 15px 'Poppins',sans-serif; border:none; border-radius:10px;
-          background:var(--gold); color:var(--ink); cursor:pointer; transition:background .2s ease; box-shadow:0 6px 18px -8px rgba(212,164,90,.7); }
-  button:hover{ background:#C08F45; }
-  button:disabled{ opacity:.6; cursor:wait; }
-  button:focus-visible, input:focus-visible{ outline:2px solid var(--gold); outline-offset:2px; }
-  .fine{ font-size:13px; color:var(--slate); line-height:1.5; margin:4px 0 0; }
-  .status{ font-size:14px; color:#B3492E; min-height:1em; margin:6px 0 0; }
-  .thanks[hidden], #opt-in[hidden]{ display:none; }
-  .check{ width:52px; height:52px; border-radius:50%; background:var(--ink); display:flex; align-items:center; justify-content:center; margin-bottom:22px; }
-  .thanks h2{ font-family:'Cormorant Garamond',Georgia,serif; font-weight:600; font-size:30px; line-height:1.25; margin:0 0 18px; }
-  .thanks p{ font-size:16px; line-height:1.7; margin:0 0 16px; }
-  footer{ text-align:center; margin-top:28px; font-size:12px; color:var(--slate); letter-spacing:.03em; }
-  footer a{ color:var(--slate); }
-  @media (max-width:520px){ .page{ padding:36px 22px; } }
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;font-family:'Poppins',system-ui,sans-serif;font-size:16px;line-height:1.7;color:var(--text);
+    background:linear-gradient(180deg,#FBF7F0 0%,var(--sampanie) 100%) fixed;background-color:var(--fildes);overflow-x:hidden;
+    padding:64px max(16px, env(safe-area-inset-right,0px)) 40px max(16px, env(safe-area-inset-left,0px))}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.35;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.24 0 0 0 0 0.19 0 0 0 0 0.15 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  .motiv{position:fixed;z-index:0;pointer-events:none}
+  .motiv-val{right:-8%;bottom:-6%;width:75vw;max-width:1100px;opacity:.85;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 45%);mask-image:linear-gradient(90deg,transparent 0%,#000 45%)}
+  .motiv-cerc{right:-12vw;top:50%;width:min(900px,80vw);margin-top:calc(min(900px,80vw) / -2);opacity:.75;animation:roteste 120s linear infinite}
+  @keyframes roteste{to{transform:rotate(360deg)}}
+  .page{position:relative;z-index:2;max-width:1180px;margin:0 auto}
+  #opt-in{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:start}
+  .stanga{padding-top:20px}
+  .eyebrow{font-size:14px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--bronz);margin-bottom:26px;
+    padding-bottom:16px;border-bottom:1px solid transparent;border-image:linear-gradient(90deg,rgba(168,129,79,.7),rgba(168,129,79,.06)) 1}
+  h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(38px,4.6vw,62px);line-height:1.08;letter-spacing:-.015em;color:var(--ciocolata);margin:0 0 28px}
+  h1 em{font-style:italic;font-weight:500;background:var(--auriu-satin);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+  p.sub{font-size:17px;line-height:1.75;color:var(--text-moale);margin:0}
+  .card-form,.thanks{background:rgba(255,253,248,.82);backdrop-filter:blur(4px);border:1px solid rgba(168,129,79,.28);border-radius:36px;
+    padding:44px 40px 38px;box-shadow:0 30px 70px -40px rgba(62,50,38,.45)}
+  .offer{position:relative;padding:0 0 0 22px;margin:0 0 28px;font-size:16px;line-height:1.75;color:var(--text-moale)}
+  .offer::before{content:"";position:absolute;left:0;top:4px;bottom:4px;width:2px;border-radius:2px;background:var(--auriu-satin)}
+  .offer p{margin:0 0 12px}.offer p:last-child{margin:0}
+  .offer strong{color:var(--ciocolata);font-weight:600}
+  .offer ul{margin:0 0 14px;padding-left:20px}.offer li{margin:0 0 6px}
+  .next{font-size:16px;line-height:1.65;margin:0 0 24px;color:var(--text-moale)}
+  .next strong{color:var(--accent-1)}
+  form{display:grid;gap:12px;margin-bottom:14px}
+  .row{display:flex;gap:12px;flex-wrap:wrap}
+  input[type=text],input[type=email]{flex:1;min-width:180px;padding:15px 20px;font:16px 'Poppins',sans-serif;border:1.5px solid rgba(168,129,79,.35);
+    border-radius:999px;background:#FFFDF8;color:var(--text)}
+  input[type=text]:focus,input[type=email]:focus{outline:none;border-color:var(--accent-1)}
+  .gdpr{display:flex;gap:12px;align-items:flex-start;font-size:13.5px;line-height:1.55;color:var(--text-moale)}
+  .gdpr input{margin-top:4px;width:17px;height:17px;flex:0 0 auto;accent-color:var(--accent-1)}
+  .gdpr a{color:var(--accent-1)}
+  button{position:relative;overflow:hidden;padding:18px 30px;font:500 13.5px 'Poppins',sans-serif;letter-spacing:.14em;text-transform:uppercase;border:none;border-radius:999px;
+    color:#FFFCF5;cursor:pointer;background:linear-gradient(115deg,transparent 15%,rgba(255,255,255,.12) 35%,transparent 55%),linear-gradient(160deg,var(--accent-1) 0%,var(--accent-2) 100%);
+    box-shadow:0 14px 30px -16px rgba(40,30,20,.6);transition:transform .25s,background .25s}
+  button:hover{transform:translateY(-2px);background:linear-gradient(115deg,transparent 15%,rgba(255,255,255,.16) 35%,transparent 55%),linear-gradient(160deg,var(--accent-hover) 0%,var(--accent-1) 100%)}
+  button:disabled{opacity:.6;cursor:wait;transform:none}
+  button:focus-visible,input:focus-visible{outline:2px solid var(--accent-1);outline-offset:3px}
+  .fine{font-size:13.5px;color:var(--text-moale);line-height:1.55;margin:6px 0 0}
+  .status{font-size:14px;color:#A33E22;min-height:1em;margin:4px 0 0}
+  .thanks[hidden],#opt-in[hidden]{display:none}
+  .thanks{max-width:720px;margin:0 auto;padding:56px 54px 48px}
+  .check{width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:26px;
+    background:linear-gradient(160deg,var(--accent-1) 0%,var(--accent-2) 100%)}
+  .thanks h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(30px,3.4vw,40px);line-height:1.2;margin:0 0 20px;color:var(--ciocolata)}
+  .thanks p{font-size:16.5px;line-height:1.75;margin:0 0 16px;color:var(--text-moale)}
+  footer{position:relative;z-index:2;text-align:center;margin-top:56px;font-size:13px;letter-spacing:.04em}
+  footer a{color:var(--bronz);text-decoration:none;border-bottom:1px solid rgba(110,74,38,.35)}
+  .apare{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .apare.vizibil{opacity:1;transform:none}
+  .i1{transition-delay:.15s}.i2{transition-delay:.3s}
+  @media (prefers-reduced-motion:reduce){.apare{opacity:1;transform:none;transition:none}.motiv-cerc{animation:none}}
+  @media (max-width:900px){
+    body{padding-top:40px}
+    #opt-in{grid-template-columns:1fr;gap:36px}
+    .stanga{padding-top:0}
+    .motiv-val{width:140vw;right:-40vw;opacity:.6}
+    .motiv-cerc{width:130vw;right:-60vw;top:6%;margin-top:0;opacity:.5}
+  }
+  @media (max-width:520px){
+    .card-form,.thanks{padding:32px 22px 28px;border-radius:28px}
+    button{width:100%}
+  }
 </style>
 </head>
 <body>
+<svg class="motiv motiv-cerc" viewBox="0 0 400 400" aria-hidden="true"><defs><linearGradient id="cercAu" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9C7442"/><stop offset=".5" stop-color="#E6C98E"/><stop offset="1" stop-color="#8C6634"/></linearGradient></defs><circle cx="200" cy="200" r="180" fill="none" stroke="url(#cercAu)" stroke-width="1.2" opacity=".7"/><circle cx="200" cy="200" r="150" fill="none" stroke="url(#cercAu)" stroke-width=".6" opacity=".45" stroke-dasharray="2 7"/><circle cx="200.0" cy="20.0" r="7" fill="url(#cercAu)"/><circle cx="290.0" cy="44.1" r="4.2" fill="url(#cercAu)"/><circle cx="355.9" cy="110.0" r="4.2" fill="url(#cercAu)"/><circle cx="380.0" cy="200.0" r="4.2" fill="url(#cercAu)"/><circle cx="355.9" cy="290.0" r="4.2" fill="url(#cercAu)"/><circle cx="290.0" cy="355.9" r="4.2" fill="url(#cercAu)"/><circle cx="200.0" cy="380.0" r="4.2" fill="url(#cercAu)"/><circle cx="110.0" cy="355.9" r="4.2" fill="url(#cercAu)"/><circle cx="44.1" cy="290.0" r="4.2" fill="url(#cercAu)"/><circle cx="20.0" cy="200.0" r="4.2" fill="url(#cercAu)"/><circle cx="44.1" cy="110.0" r="4.2" fill="url(#cercAu)"/><circle cx="110.0" cy="44.1" r="4.2" fill="url(#cercAu)"/></svg>
 
 <main class="page">
 
   <div id="opt-in">
+    <div class="stanga apare">
     <div class="eyebrow">Fă pace cu banii tăi · Listă de așteptare</div>
     <h1>Te lupți de ani de zile cu banii. <em>Dar nimeni nu ți-a arătat ce faci în momentul în care apare frica.</em></h1>
     <p class="sub">Poate muncești mult, dar simți că nu câștigi atât cât ți-ai dori. Poate câștigi bine, dar trăiești cu teama că banii nu vor fi suficienți. Sau poate știi foarte bine ce ai avea de făcut, dar ceva te oprește exact când vrei să faci un pas înainte.</p>
 
+    </div>
+
+    <div class="card-form apare i1">
     <div class="offer">
       <p><strong>„Fă pace cu banii tăi”</strong> este un spațiu în care lucrăm cu emoțiile, convingerile și tiparele care influențează felul în care câștigi, primești și păstrezi banii. În fiecare lună lucrăm împreună la un blocaj specific:</p>
       <ul>
@@ -99,11 +135,12 @@
       <p class="status" id="status" role="alert"></p>
     </form>
     <p class="fine">Înscrierea pe listă e gratuită. Primești un email de bun venit în câteva minute și te poți dezabona oricând.</p>
+    </div>
   </div>
 
   <div id="thanks" class="thanks" hidden>
     <div class="check" aria-hidden="true">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#D4A45A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#FAF6EE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </div>
     <div class="eyebrow">Ești pe listă</div>
     <h2>Ești pe lista de așteptare pentru „Fă pace cu banii tăi”.</h2>
@@ -165,6 +202,9 @@
         || 'Nu am putut înregistra abonarea. Te rog încearcă din nou.';
     });
   });
+</script>
+<script>
+  (function(){var e=document.querySelectorAll('.apare');requestAnimationFrame(function(){e.forEach(function(x){x.classList.add('vizibil')})});})();
 </script>
 </body>
 </html>
