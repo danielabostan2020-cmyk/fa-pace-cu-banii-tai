@@ -14,18 +14,13 @@
   ],
   "redirects": [
     {
-      "source": "/membership.html",
-      "destination": "/",
-      "permanent": true
-    },
-    {
       "source": "/membership",
-      "destination": "/",
+      "destination": "/membership.html",
       "permanent": true
     },
     {
       "source": "/program.html",
-      "destination": "/",
+      "destination": "/membership.html",
       "permanent": true
     },
     {

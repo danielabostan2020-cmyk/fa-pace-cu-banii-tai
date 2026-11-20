@@ -29,6 +29,8 @@ export default function Footer({ disclaimer = defaultDisclaimer }: { disclaimer?
                 &nbsp;·&nbsp;
               </>
             )}
+            <a href="/membership.html">Membership</a>
+            &nbsp;·&nbsp;
             <a href="/eft-prosper.html">Kitul EFT Prosper</a>
             &nbsp;·&nbsp;
             <a href="/rani-financiare.html">Testul Rănilor Financiare</a>

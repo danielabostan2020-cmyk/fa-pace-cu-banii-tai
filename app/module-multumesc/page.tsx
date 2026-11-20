@@ -81,7 +81,7 @@ export default function ModuleMultumescPage() {
 
           <FadeIn as="p" className="ty-guarantee">
             Dacă pe parcurs simți că vrei tot traseul, cu întâlnirile live și cu ghidajul meu
-            direct, <a href="/">membershipul te așteaptă</a>.
+            direct, <a href="/membership.html">membershipul te așteaptă</a>.
           </FadeIn>
         </div>
       </section>

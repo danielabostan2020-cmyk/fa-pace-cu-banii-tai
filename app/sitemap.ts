@@ -21,9 +21,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: `${BASE}/`,
-      lastModified: '2026-09-06',
+      lastModified: '2026-11-20',
       changeFrequency: 'monthly',
       priority: 1,
+    },
+    {
+      url: `${BASE}/membership.html`,
+      lastModified: '2026-11-20',
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
     {
       url: `${BASE}/eft-prosper.html`,

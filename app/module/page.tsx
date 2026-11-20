@@ -70,7 +70,7 @@ export default function ModulePage() {
               </ul>
               <p className="mod-box-note">
                 Lucrul în grup și ghidajul meu direct se întâmplă doar în membership. Dacă simți
-                că ai nevoie de ele, <a href="/">vezi parcursul complet</a>.
+                că ai nevoie de ele, <a href="/membership.html">vezi parcursul complet</a>.
               </p>
             </FadeIn>
           </div>
@@ -130,7 +130,7 @@ export default function ModulePage() {
             pe drum. Dacă știi că vrei schimbarea întreagă, acolo e locul tău.
           </FadeIn>
           <FadeIn delay={2} className="cta-group centered">
-            <a href="/" className="btn btn-gold">
+            <a href="/membership.html" className="btn btn-gold">
               Vezi membershipul „Fă pace cu banii tăi" →
             </a>
           </FadeIn>

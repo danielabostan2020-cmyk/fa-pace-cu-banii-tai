@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node -e \"require('fs').copyFileSync('out/reprogramarea-emotionala.html','out/index.html')\"",
     "start": "next start",
     "lint": "next lint"
   },
